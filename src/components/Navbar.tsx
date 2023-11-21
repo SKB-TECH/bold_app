@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 //@ts-nocheck
 import React, { useEffect, useState } from "react";
@@ -7,12 +8,14 @@ import ReactCountryFlag from "react-country-flag";
 import type { MenuProps } from "antd";
 import { Dropdown,  } from "antd"
 import {AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { links } from "../data";
+import {Link, useNavigate} from 'react-router-dom'
 
 // fin items
 const Navbar = () => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState();
   const [isScroll, setIsScroll] = useState(false);
- 
+  const router=useNavigate();
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setIsScroll(true) : setIsScroll(false);
   };
@@ -32,7 +35,7 @@ const Navbar = () => {
   // menu items definition
   const menuItems: { title: any; items: MenuProps["items"] } = [
     {
-      title: <GrLanguage size={20} />,
+      title:<div className="flex gap-3 items-center"><GrLanguage/><span>Langues</span></div>,
       items: [
         {
           key: "3",
@@ -75,38 +78,54 @@ const Navbar = () => {
   ];
   return (
     <div
-      className={`uppercase fixed w-full h-16  top-0 left-0 right-0 ${isScroll && "z-[100]  bg-white border-b-2"
+      className={`capitalize fixed w-full h-[100px] z-10 bg-secondary-dark-bg top-0 left-0 right-0 ${isScroll && "z-[100]  bg-secondary-dark-bg border-b-2"
         }`}>
-      <div className='flex items-center justify-around  w-full h-full p-6'>
-        <div className='md:flex-1 cursor-pointer -mt-2' onClick={()=>router.push("/")}>
-          <img
-            src={logo}
-            alt='Picture of the author'
-            width={150}
-            height={80}
-            className="mt-4"
-          />
-        </div>
-        <div className='md:flex-1 text-xl mr-2 ml-20'>
-          <div className='cursor-pointer z-1000 md:hidden' onClick={handlClic}>
-            <AiOutlineMenu size={45} />
+      <div className='flex items-center  w-full h-full p-6'>
+          <div className='md:flex-1 cursor-pointer -mt-2' onClick={()=>router.push("/")}>
+            <img
+              src={logo}
+              alt='Picture of the author'
+              width={150}
+              height={80}
+              className="mt-4"
+            />
           </div>
-        </div>
-        <div className='hidden lg:flex flex-row mr-14 justify-around gap-5'>
-          {menuItems.map((item, index) => {
-            const items = item.items;
-            return (
-              <Dropdown menu={{ items }} key={index} className={"flex justify-center items-center"}>
-                <a onClick={(e) => e.preventDefault()}>
-                  <h4 className="text-xl hover:text-blue_ciel transition-all duration-300 ease-in lowercase">
-                    {item.title}
-                    {/* <DownOutlined /> */}
-                  </h4>
-                </a>
-              </Dropdown>
-            );
-          })}
-        </div>
+          {/* les routes  */}
+          <div className="hidden md:flex justify-around ">
+            <ul className="flex justify-around list-none gap-12 ml-56  h-full">
+                {
+                  links.map((item,index)=>(
+                    <li className="text-gray-300 h-full justify-center">
+                      <Link to={`/${item.link}`} className={`hover:text-rouge-100  transform ease-in duration-300 ${window.location.pathname===`/${item.link}` && 'text-rouge-100'}`}>
+                        {item.title}
+                      </Link>
+                      {
+                        window.location.pathname===`/${item.link}` ? <hr className="bg-rouge mt-3" />: null
+                      }
+                    </li>
+                  ))
+                }
+            </ul>
+          </div>
+          <div className='md:flex-1 text-xl mr-2 ml-20'>
+            <div className='cursor-pointer z-1000 md:hidden ml-14' onClick={handlClic}>
+              <AiOutlineMenu size={45} className="text-rouge-100"/>
+            </div>
+          </div>
+          <div className='hidden lg:flex flex-row mr-14 justify-around gap-5'>
+            {menuItems.map((item, index) => {
+              const items = item.items;
+              return (
+                <Dropdown menu={{ items }} key={index} className={"flex justify-center items-center"}>
+                  <a onClick={(e) => e.preventDefault()}>
+                    <h4 className="text-gray-300 hover:text-rouge-100 transition-all duration-300 ease-in capitalize">
+                      {item.title}
+                    </h4>
+                  </a>
+                </Dropdown>
+              );
+            })}
+          </div>
       </div>
       <div
         className={
@@ -115,11 +134,11 @@ const Navbar = () => {
         <div
           className={
             active
-              ? "fixed top-0 left-0 w-[75%] md:w-[45%] h-screen bg-white p-4 ease-in duration-500"
+              ? "fixed top-0 left-0 w-[75%] md:w-[45%] h-screen bg-secondary-dark-bg p-4 ease-in duration-500"
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500 z-0"
           }>
           <div className='flex items-center justify-between z-[1000]'>
-            <div className='' onClick={()=>router.push("/")}>
+            <div className='' onClick={()=>router('/')}>
               <img
                 src={logo}
                 alt='Picture of the author'
@@ -129,24 +148,36 @@ const Navbar = () => {
             </div>
             <div
               onClick={handlClic}
-              className='p-2 mr-2 rounded-full shadow-lg cursor-pointer shadow-gray-400'>
+              className='flex p-2 mr-2 rounded-full shadow-lg cursor-pointer bg-rouge'>
               <AiOutlineClose />
             </div>
           </div>
-          <div className='my-4 border-b border-gray-300'>
-            <p className='w-[85%] md:w-[90%] py-4 mx-auto '>
+          <div className='my-4 border-b border-gray-100'>
+            <p className='w-[85%] md:w-[90%] py-4 mx-auto text-gray-30'>
               Que voulez-vous faire ?
             </p>
           </div>
           <div className='flex flex-col justify-start gap-10 cursor-pointer'>
+          <div className="sm:hidden flex  flex-col justify-around ">
+          <ul className="flex flex-col justify-around list-none gap-12">
+              {
+                links.map((item,index)=>(
+                  <li className="text-gray-300 flex flex-col gap-3 hover:text-rouge-100 transform ease-in duration-300" onClick={handlClic}>
+                    <Link to={`/${item.link}`}>{item.title}</Link>
+                    <hr className="bg-gray-300"/>
+                  </li>
+                ))
+              }
+          </ul>
+        </div>
             {menuItems.map((item, index) => {
               const items = item.items;
               return (
-                <Dropdown menu={{ items }} key={index} className={"flex ml-4 items-center"}>
+                <Dropdown menu={{ items }} key={index} className={"flex items-center"}>
                   <a onClick={(e) => e.preventDefault()}>
-                    <h4 className="text-xl hover:text-blue_ciel transition-all duration-300 ease-in lowercase">
+                    <h4 className="text-gray-300  hover:text-rouge-100 transition-all duration-300 ease-in capitalize">
                       {item.title}
-                      {/* <DownOutlined /> */}
+                      {/* <hr className="bg-gray-300 h-1"/> */}
                     </h4>
                   </a>
                 </Dropdown>

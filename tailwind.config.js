@@ -28,6 +28,10 @@ module.exports = {
         yellow: {
           50: '#FEC601',
         },
+
+        rouge:{
+          100: '#af2e16'
+        }
       },
       backgroundImage: {
         'bg-img-1': "url('/src/data/imagescreen1.png')",
@@ -55,9 +59,10 @@ module.exports = {
       backgroundColor: {
         'main-bg': '#ffffff',
         'main-dark-bg': '#20232A',
-        'secondary-dark-bg': '#33373E',
+        'secondary-dark-bg': '#121212',
         'light-gray': '#F7F7F7',
         'half-transparent': 'rgba(0, 0, 0, 0.5)',
+        'rouge':'#af2e16'
       },
       borderWidth: {
         1: '1px',
