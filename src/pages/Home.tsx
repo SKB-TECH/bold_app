@@ -1,12 +1,16 @@
 import React from 'react'
-import { HomeCover } from '../components'
-
+import { HomeCover, HomeSectionI,  HomeSectionII, HomeSectionIII, HomeSectionFour, HomeSectionFive  } from '../components'
 
 const Home = () => {
   return (
-    <div>
+    <section>
       <HomeCover/>
-    </div>
+      <HomeSectionI/>
+      <HomeSectionII/>
+      <HomeSectionIII/>
+      <HomeSectionFour/>
+      <HomeSectionFive/>
+    </section>
   )
 }
 

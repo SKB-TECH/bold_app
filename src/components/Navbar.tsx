@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/img-redundant-alt */
-//@ts-nocheck
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import { GrLanguage} from "react-icons/gr";
@@ -13,7 +10,7 @@ import {Link, useNavigate} from 'react-router-dom'
 
 // fin items
 const Navbar = () => {
-  const [active, setActive] = useState();
+  const [active, setActive] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
   const router=useNavigate();
   const listenScrollEvent = () => {
@@ -33,7 +30,7 @@ const Navbar = () => {
 
 
   // menu items definition
-  const menuItems: { title: any; items: MenuProps["items"] } = [
+  const menuItems: { title: unknown; items: MenuProps["items"] } = [
     {
       title:<div className="flex gap-3 items-center"><GrLanguage/><span>Langues</span></div>,
       items: [
@@ -81,7 +78,7 @@ const Navbar = () => {
       className={`capitalize fixed w-full h-[100px] z-10 bg-secondary-dark-bg top-0 left-0 right-0 ${isScroll && "z-[100]  bg-secondary-dark-bg border-b-2"
         }`}>
       <div className='flex items-center  w-full h-full p-6'>
-          <div className='md:flex-1 cursor-pointer -mt-2' onClick={()=>router.push("/")}>
+          <div className='md:flex-1 cursor-pointer -mt-2' onClick={()=>router("/")}>
             <img
               src={logo}
               alt='Picture of the author'
@@ -96,7 +93,7 @@ const Navbar = () => {
                 {
                   links.map((item,index)=>(
                     <li className="text-gray-300 h-full justify-center">
-                      <Link to={`/${item.link}`} className={`hover:text-rouge-100  transform ease-in duration-300 ${window.location.pathname===`/${item.link}` && 'text-rouge-100'}`}>
+                      <Link key={index} to={`/${item.link}`} className={`hover:text-rouge-100  transform ease-in duration-300 ${window.location.pathname===`/${item.link}` && 'text-rouge-100'}`}>
                         {item.title}
                       </Link>
                       {

@@ -1,6 +1,6 @@
 import React from 'react'
-import { bannier } from '../data'
-
+import { bannier } from '../../data'
+import { Button } from '..'
 
 
 const HomeCover = () => {
@@ -12,12 +12,12 @@ const HomeCover = () => {
             {
               bannier.map((item,index)=>(
                   <>
-                    <h2 className='bold-40 text-white'>{item.title}</h2>
-                    <p className='text-white md:w-[600px] bold-40'>{item.resume}</p>
+                    <h2 className= ' bold-20 md:bold-40 text-white'>{item.title}</h2>
+                    <p className='text-white md:w-[600px]   bold-20 md:bold-40'>{item.resume}</p>
                   </>
               ))
             }
-            <button className='text-white bg-rouge w-60 h-14 rounded-lg bold-20'>Decouvrer Bold</button>
+            <Button type='button' texte={"Decouvrer Bold"} couleur='rouge' taille={44}/>
          </div>
          
       </div>
