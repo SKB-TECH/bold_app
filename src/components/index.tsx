@@ -4,3 +4,7 @@ export {default as Navbar} from './Navbar';
 export {default as HomeCover} from './home/HomeCover';
 export {default as Button} from './elements/Button';
 export {default as HomeSectionI} from './home/HomeSectionI';
+export {default as HomeSectionII} from './home/HomeSectionII';
+export {default as HomeSectionIII } from './home/HomeSectionIII';
+export {default as HomeSectionFour } from './home/HomeSectionFour';
+export {default as HomeSectionFive} from './home/HomeSectionFive';

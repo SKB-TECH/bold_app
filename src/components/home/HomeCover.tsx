@@ -12,8 +12,8 @@ const HomeCover = () => {
             {
               bannier.map((item,index)=>(
                   <>
-                    <h2 className='bold-40 text-white'>{item.title}</h2>
-                    <p className='text-white md:w-[600px] bold-40'>{item.resume}</p>
+                    <h2 className= ' bold-20 md:bold-40 text-white'>{item.title}</h2>
+                    <p className='text-white md:w-[600px]   bold-20 md:bold-40'>{item.resume}</p>
                   </>
               ))
             }

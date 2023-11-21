@@ -9,7 +9,7 @@ interface model_btn{
 
 const Button = ({type,texte,couleur, functions,taille}:model_btn) => {
   return (
-    <button className={`text-white bg-${couleur} w-56 h-14 rounded-lg bold-20`} type={type} onClick={functions}>
+    <button className={`text-white bg-${couleur} w-[96%] md:w-56 h-14 rounded-lg bold-20 hover:underline`} type={type} onClick={functions}>
         {texte}
     </button>
   )
