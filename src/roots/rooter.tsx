@@ -1,6 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom';
 import Layout from '../components/layouts/Layout';
-import { Home, About, Contact, Programme, Blogue } from '../pages';
+import { Home, About, Contact, Programme, Blogue, Don } from '../pages';
 
 
 const rootApp=createBrowserRouter([
@@ -24,6 +24,10 @@ const rootApp=createBrowserRouter([
             {
                 path: '/programme',
                 element: <Programme/>
+            },
+            {
+                path: '/don',
+                element: <Don />
             }
         ]
     } ,
