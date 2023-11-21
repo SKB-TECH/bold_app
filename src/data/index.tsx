@@ -14,6 +14,10 @@ export const links=[
         link: 'apropos'
     },
     {
+        title: 'faire un don',
+        link: 'don'
+    },
+    {
         title: 'Rejoignez-nous',
         link: 'contact'
     },
