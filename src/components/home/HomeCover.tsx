@@ -1,6 +1,6 @@
 import React from 'react'
-import { bannier } from '../data'
-
+import { bannier } from '../../data'
+import { Button } from '..'
 
 
 const HomeCover = () => {
@@ -17,7 +17,7 @@ const HomeCover = () => {
                   </>
               ))
             }
-            <button className='text-white bg-rouge w-60 h-14 rounded-lg bold-20'>Decouvrer Bold</button>
+            <Button type='button' texte={"Decouvrer Bold"} couleur='rouge' taille={44}/>
          </div>
          
       </div>

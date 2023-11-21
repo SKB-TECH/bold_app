@@ -1,12 +1,13 @@
 import React from 'react'
-import { HomeCover } from '../components'
+import { HomeCover, HomeSectionI } from '../components'
 
 
 const Home = () => {
   return (
-    <div>
+    <section>
       <HomeCover/>
-    </div>
+      <HomeSectionI/>
+    </section>
   )
 }
 
