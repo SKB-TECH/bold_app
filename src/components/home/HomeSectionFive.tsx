@@ -17,7 +17,7 @@ const HomeSectionFive = () => {
       <div className='flex flex-col gap-5 mg:gap-15 w-[97%] md:w-[1/2]'>
         <input type={"text"} placeholder='Noms ' className='outline-none  w-[99%]   md:w-[93%] h-10 border border-gray-400 rounded-md '/>
         <input type={"email"} placeholder='Addresse email ' className='outline-none  w-[99%] md:w-[93%] h-10 border border-gray-400 rounded-md'/>
-        <button className='outline-none w-[99%]  md:w-[93%] h-10 border border-gray-400  rounded-md bg-rouge text-gray-300 bold-18'>Souscrire</button>
+        <button className='outline-none w-[99%]  md:w-[93%] h-10 border border-gray-400  rounded-md bg-rouge text-white bold-18'>S'Inscrire</button>
       </div>
     </section>
   )

@@ -9,25 +9,27 @@ import { CardPoste } from '..';
 
 const HomeSectionII = () => {
   return (
-    <section className='w-full h-full md:h-[35rem]  bg-gray-300 mt-10 lg:mt-24 padding-container'>
+    <section className='w-full h-screen flexCenter bg-gray-200 mt-10 lg:mt-24 md:padding-container'>
       <div className={"w-[95%] md:w-[100%] flex flex-col gap-5 py-5"} >
             <h2 className='bold-20 md:bold-40 lg:ml-8'>A la une </h2>
             <div className='flex flexCenter flex-col gap-20 w-full h-full md:flex-row'>
                 <Swiper
+                
                 breakpoints={
                   {
                     340:{
                       slidesPerView: 1,
                       spaceBetween: 15
                     },
-                    700:{
+                    768:{
                       slidesPerView: 3,
                       spaceBetween: 15
                     },
+
                   }
                 }
                 
-                // freeMode={true}
+                freeMode={true}
                 pagination={{
                   clickable:true
                 }}
@@ -35,8 +37,10 @@ const HomeSectionII = () => {
                   delay: 3000,
                   disableOnInteraction: true,
                 }}
+    
+               
                 modules={[FreeMode, Pagination]}
-                className='max-w-[96%] md:max-w-full'
+                className='max-w-[100%] md:max-w-full gap-20'
                 >
                   <SwiperSlide>
                     <CardPoste/>  

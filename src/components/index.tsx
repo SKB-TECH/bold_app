@@ -9,3 +9,4 @@ export {default as HomeSectionIII } from './home/HomeSectionIII';
 export {default as HomeSectionFour } from './home/HomeSectionFour';
 export {default as HomeSectionFive} from './home/HomeSectionFive';
 export {default as CardPoste} from './elements/CardPoste';
+export {default as CardPostes} from './elements/CardPostes'
