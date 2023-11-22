@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
@@ -9,9 +9,12 @@ import { CardPostes } from '..';
 
 const HomeSectionFour = () => {
   return (
-    <section className='w-full h-screen flexCenter bg-rouge mt-10 lg:mt-24 md:padding-container'>
+    <section className='w-full md:h-[36rem] flexCenter bg-rouge mt-10 lg:mt-24 md:padding-container'>
       <div className={"w-[95%] md:w-[100%] flex flex-col gap-5 py-5"} >
-            <h2 className='bold-18 md:bold-32 lg:ml-8 text-gray-300'>Recentes Publications </h2>
+            <div className='flex  flex-col md:flex-row justify-between md:items-center '>
+                <h2 className='bold-18 md:bold-32 lg:ml-8 text-gray-300'>Recentes Publications </h2>
+                <span  className='md:padding-container text-gray-300 underline bold-18'><Link to={'/blogue'}>Toutes les Publications</Link></span>
+            </div>
             <div className='flex flexCenter flex-col gap-20 w-full h-full md:flex-row'>
                 <Swiper
                 
