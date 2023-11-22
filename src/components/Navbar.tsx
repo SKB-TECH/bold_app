@@ -77,19 +77,13 @@ const Navbar = () => {
     <div
       className={`capitalize fixed w-full h-[100px] z-10 bg-secondary-dark-bg top-0 left-0 right-0 ${isScroll && "z-[100]  bg-secondary-dark-bg border-b-2"
         }`}>
-      <div className='flex items-center  w-full h-full p-6'>
-          <div className='md:flex-1 cursor-pointer -mt-2' onClick={()=>router("/")}>
-            <img
-              src={logo}
-              alt='Picture of the author'
-              width={150}
-              height={80}
-              className="mt-4"
-            />
-          </div>
+      <div className='flex items-center  w-full h-full padding-container'>
+          <Link to="/">
+          <img src={logo} width={120} height={100} alt="logo" />
+        </Link>
           {/* les routes  */}
           <div className="hidden md:flex justify-around ">
-            <ul className="flex justify-around list-none gap-12 ml-56  h-full">
+            <ul className="flex justify-around list-none gap-12 ml-32  h-full">
                 {
                   links.map((item,index)=>(
                     <li className="text-gray-300 h-full justify-center">
