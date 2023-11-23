@@ -1,8 +1,11 @@
+import { DonCover, DonSectionI, HomeSectionFive } from "../components"
 
 const Don = () => {
   return (
     <div>
-      don
+      <DonCover/>
+      <DonSectionI/>
+      <HomeSectionFive/>
     </div>
   )
 }

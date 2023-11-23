@@ -77,7 +77,7 @@ const Navbar = () => {
     <div
       className={`capitalize fixed w-full h-[100px] z-10 bg-secondary-dark-bg top-0 left-0 right-0 ${isScroll && "z-[100]  bg-secondary-dark-bg border-b-2"
         }`}>
-      <div className='flex items-center  w-full h-full padding-container'>
+      <div className='flex justify-between items-center  w-full h-full padding-container'>
           <Link to="/">
           <img src={logo} width={120} height={100} alt="logo" />
         </Link>
@@ -128,7 +128,7 @@ const Navbar = () => {
               ? "fixed top-0 left-0 w-[75%] md:w-[45%] h-screen bg-secondary-dark-bg p-4 ease-in duration-500"
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500 z-0"
           }>
-          <div className='flex items-center justify-between z-[1000]'>
+          <div className='w-full flex items-center justify-between z-[1000]'>
             <div className='' onClick={()=>router('/')}>
               <img
                 src={logo}

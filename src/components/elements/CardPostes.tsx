@@ -1,10 +1,25 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { AiOutlineLike } from "react-icons/ai";
-import photo from '../../assets/goma.jpeg'
+import photo from '../../assets/goma.jpeg';
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 const CardPostes = () => {
+
+  useEffect(() => {
+    AOS.init({
+        offset: 200,
+        duration: 600,
+        easing: "ease-in-sine",
+        delay: 100,
+      });
+  })
+
   return (
-    <div className='w-[400px] md:w-[550px] h-96 md:h-[400px] bg-white rounded-lg drop-shadow-sm border hover:shadow-lg'>
+    <div data-aos="flip-right" className='w-[400px] md:w-[550px] h-96 md:h-[400px] bg-white rounded-lg drop-shadow-sm border hover:shadow-lg'>
         <div className="h-[48%] bg-rouge">
             <img src={photo} className="object-cover h-full w-full" alt="image"/>
         </div>

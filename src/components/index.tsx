@@ -9,4 +9,11 @@ export {default as HomeSectionIII } from './home/HomeSectionIII';
 export {default as HomeSectionFour } from './home/HomeSectionFour';
 export {default as HomeSectionFive} from './home/HomeSectionFive';
 export {default as CardPoste} from './elements/CardPoste';
-export {default as CardPostes} from './elements/CardPostes'
+export {default as CardPostes} from './elements/CardPostes';
+export {default as AboutCover} from './about/AboutCover';
+export {default as Presentation} from './about/Presentation';
+export {default as AboutSectionII } from './about/AboutSectionII';
+export {default as Comment } from './about/Comment';
+export {default as Principes} from './about/Principes';
+export {default as DonCover} from './don/DonCover';
+export {default as DonSectionI} from './don/DonSectionI';

@@ -54,3 +54,144 @@ export const exoViolence=[
     }]
     }
 ]
+
+export const namePages=[
+    {
+        title: "Apropos de Bold",
+        resume:["Qui sommes-nous ?","Qu'est-ce-que nous faisons ?", "Comment nous le faisons ?"]
+    }
+    
+]
+
+export const apropos=[
+    {
+        title: "A propos de Bold",
+        resume:[
+            {
+                paragraphe:"BOLD est une Association Sans But Lucratif poursuivant  la vision d’un monde de dignité pour toutes les femmes et les filles. Notre mission  est de renforcer, accompagner et soutenir les femmes et filles pour la construction des communautés inclusives et équitables. "
+            },
+            {
+                paragraphe: "Son siège social se situe à Goma, en République Démocratique du Congo. "
+            }
+        ]
+    }
+]
+
+export const aproposII=[
+    {
+        title:"Que faisons-nous",
+        resume:[
+            {
+                paragraphe: "BOLD favorise la voix des femmes et des filles et leur construit un espace d’expression ouverte et positive de sorte que entendue et leurs préoccupations considérées. A travers son action BOLD soutient des programmes d’éducation adaptée, appui les institutions et les parties prenantes pour favoriser une gouvernance inclusive ainsi que le développement durable basé sur l’égalité et l’équité."
+            },
+            {
+                paragraphe: "L’action de Bold est portée par des femmes, des hommes, des filles et des garçons qui ont conscience que l’égalité des sexes commence par le respect de la dignité dont a droit chaque être humain, dont les femmes et les filles."
+            }
+        ]
+    }
+]
+
+
+export const comment=[
+    {
+        title:"Comment le faisons-nous",
+        detail:[{
+            sub:"A travers notre action, nous poursuivons deux objectifs principaux ",
+            resume:[
+                    {
+                        children:'Contribuer à l’amélioration de la condition de vie des femmes et des filles dans leurs communautés',
+                        color: '#af2e16',
+                        dot: <span className=" rounded-full text-rouge bold-18">{"A)"}</span>
+                    },
+                    {
+                        children: 'Participer au développement des communautaire en favorisant une participation équitable et égalitaire.',
+                        color: '#af2e16',
+                        dot: <span className=" rounded-full text-rouge bold-18">{"B)"}</span>
+
+                    }
+            ]
+        },
+        {
+            sub:"Pour réaliser les objectifs ci-hauts définis",
+            resume:[
+                    {
+                        children:'Appuie les initiatives locales des femmes et des jeunes filles en vue de leur autonomisation;',
+                        color: '#af2e16',
+                        dot: <span className=" rounded-full text-rouge bold-18">{"I"}</span>
+                    },
+                    {
+                        children: 'Offre un espace et cadre d’échange et de partage pour renforcer la solidarité entre femmes ;',
+                        color: '#af2e16',
+                        dot: <span className=" rounded-full text-rouge bold-18">{"II"}</span>
+
+                    },
+                    {
+                        children: 'Transmet la connaissance de leurs droits aux femmes à travers diverses techniques d’apprentissage ;',
+                        color: '#af2e16',
+                        dot: <span className=" rounded-full text-rouge bold-18">{"III"}</span>
+                    },
+                    {
+                        children: ' Travailler en synergie avec d’autres partenaires socio-humanitaires et de développement en vue de la réalisation des plans d’accompagnement et d’aide aux femmes et aux filles ainsi qu’aux autres parties prenantes pertinentes.',
+                        color: '#af2e16',
+                        dot: <span className=" rounded-full text-rouge bold-18">{"IV"}</span>
+                    }
+            ]
+        }
+        ]
+    },
+]
+
+export const valeurs=[
+    {
+        title: "Nos valeurs",
+        deatils:[
+            {
+                sub:"BOLD se construit sur les valeurs  les valeurs fondamentales ci-après :",
+                resume:[
+                    {
+                        title:"L’égalité"
+                    },
+                    {
+
+                        title:"La dignité"
+                    },
+                    {
+                        title:"L’intégrité"
+                    },
+                    {
+                        title: "La solidarité"
+                    },
+                    {
+                        title: "La bienveillance"
+                    }
+
+                ]
+            }
+        ]
+    }
+]
+
+export const alldon=[
+    {
+        title:["Nous soutenir"],
+        sub: "Nous croyons en un monde où les différends sont résolus sans violence, et où les populations peuvent offrir un avenir plus pacifié à leurs familles et communautés."
+    }
+]
+
+export const dons=[
+    {
+        sub_title: "Grâce à votre soutien, nous aidons les filles et filles a trouvents leurs places au sein de la societe moderne ",
+        resume:[
+            {
+                paragraphe: "BOLD favorise la voix des femmes et des filles et leur construit un espace d’expression ouverte et positive de sorte que entendue et leurs préoccupations considérées."
+            },
+
+            {
+                paragraphe: "A travers son action BOLD soutient des programmes d’éducation adaptée, appui les institutions et les parties prenantes pour favoriser une gouvernance inclusive ainsi que le développement durable basé sur l’égalité et l’équité."
+            },
+            {
+                paragraphe: "L’action de Bold est portée par des femmes, des hommes, des filles et des garçons qui ont conscience que l’égalité des sexes commence par le respect de la dignité dont a droit chaque être humain, dont les femmes et les filles. "
+            }
+        ]
+    }
+]
