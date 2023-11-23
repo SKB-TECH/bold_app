@@ -195,3 +195,53 @@ export const dons=[
         ]
     }
 ]
+
+export const calldon=[
+    {
+        sub_title: "Faites un don aujourd’hui et aidez-nous à faire de la parite une realite",
+        btn:"Nous soutenir Aujourd'hui",
+        resume:[
+            {
+                paragraphe: "Nous croyons en un monde où les populations résolvent leurs différends sans violence."
+            },
+
+            {
+                paragraphe: "Que ce soit à l’échelon des communautés ou au niveau politique, nous rapprochons pour instaurer une paix durable."
+            },
+        ]
+    }
+]
+
+export const otherdon=[
+    {
+        title:"Vous pouvez aider le travail de Bold de diverses manières",
+        resume:[
+            {
+                sub_title:"Investir dans la paix",
+                paragraphe:"Devenez un partenaire financier et investissez dans des aspects spécifiques de notre travail. Nos programmes portent sur un large éventail de thématiques, d’un travail de dialogue pour encourager la guérison des traumatismes au niveau individuel et sociétal, jusqu’à des programmes visant à provoquer un changement pour faire entendre toutes les parties à un conflit et ainsi soutenir la paix."
+            },
+            {
+                sub_title:"Devenir un champion de la paix ",
+                paragraphe:"Organisez un événement pour recueillir des fonds, sponsorisez nos événements, apportez un soutien en nature ou soutenez-nous par le biais de votre entreprise."
+            },
+            {
+                sub_title: "Mieux nous connaître ",
+                paragraphe: "Abonnez-vous à notre newsletter, partagez nos publications et blogs et suivez notre travail sur les réseaux sociaux."
+            },
+            {
+                sub_title:"Faire un legs",
+                paragraphe: " laissez un don à International Alert dans votre testament et continuez à exercer une influence pendant des années."
+            }
+        ],
+
+        paragraphe: "C’est grâce au soutien de chacun que nous pourrons instaurer la paix que les populations recherchent et méritent.",
+        thank:"Nous vous remercions.",
+    }
+]
+
+export const contact=[
+    {
+        title: "Se mettre en contact avec notre équipe",
+        paragraphe: "Contactez-nous via le formulaire ci-dessous pour savoir comment nous soutenir ou vous impliquer auprès d’International Alert."
+    }
+]

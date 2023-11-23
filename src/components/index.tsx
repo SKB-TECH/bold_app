@@ -17,3 +17,5 @@ export {default as Comment } from './about/Comment';
 export {default as Principes} from './about/Principes';
 export {default as DonCover} from './don/DonCover';
 export {default as DonSectionI} from './don/DonSectionI';
+export {default as CardDon} from './elements/CardDon';
+export {default as Motivation} from './don/Motivatiion';

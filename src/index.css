@@ -167,10 +167,15 @@ body{
 
 
   .alune{
-    background-image: url("../src/assets/pattern.png");
+    background-image: url("../src/assets/feature-bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  
+  .card{
+    background-image: url("../src/assets/pattern.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }

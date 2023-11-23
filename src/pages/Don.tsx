@@ -1,10 +1,12 @@
-import { DonCover, DonSectionI, HomeSectionFive } from "../components"
+import { CardDon, DonCover, DonSectionI, HomeSectionFive, Motivation } from "../components"
 
 const Don = () => {
   return (
     <div>
       <DonCover/>
       <DonSectionI/>
+      <CardDon/>
+      <Motivation/>
       <HomeSectionFive/>
     </div>
   )
