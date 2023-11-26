@@ -1,8 +1,14 @@
+import { CardDon, DonCover, DonSectionI, HomeSectionFive, Motivation, Contact } from "../components"
 
 const Don = () => {
   return (
     <div>
-      don
+      <DonCover/>
+      <DonSectionI/>
+      <CardDon/>
+      <Motivation/>
+      <Contact/>
+      <HomeSectionFive/>
     </div>
   )
 }
