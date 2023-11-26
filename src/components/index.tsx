@@ -19,3 +19,7 @@ export {default as DonCover} from './don/DonCover';
 export {default as DonSectionI} from './don/DonSectionI';
 export {default as CardDon} from './elements/CardDon';
 export {default as Motivation} from './don/Motivatiion';
+export {default as Contact} from './don/Contact';
+export {default as ProcessCover} from './process/ProcessCover';
+export {default as Souscription} from './process/Souscription';
+export {default as Steps} from './process/Steps';

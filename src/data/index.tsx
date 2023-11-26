@@ -1,3 +1,5 @@
+import { MdEmail, MdLocationOn,  MdFax } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
 
 
 export const links=[
@@ -242,6 +244,30 @@ export const otherdon=[
 export const contact=[
     {
         title: "Se mettre en contact avec notre équipe",
-        paragraphe: "Contactez-nous via le formulaire ci-dessous pour savoir comment nous soutenir ou vous impliquer auprès d’International Alert."
+        paragraphe: "Contactez-nous via le formulaire ci-dessous pour savoir comment nous soutenir ou vous impliquer auprès de Bold."
+    }
+]
+
+
+export const coordonne=[
+    {
+        icon: <MdEmail size={18} color={"#af2e16"}/>,
+        label:"Addresse Email",
+        value:"bold@contact.com"
+    },
+    {
+        icon: <FaPhoneAlt size={18} color={"#af2e16"}/>,
+        label:"Telephone",
+        value:"+243 977 423 201"
+    },
+    {
+        icon: <MdFax  size={25} color={"#af2e16"}/>,
+        label:"Fax Address",
+        value:"098-046-3"
+    },
+    {
+        icon: <MdLocationOn size={25} color={"#af2e16"}/>,
+        label: "Location",
+        value: "Rdc/Nord-kivu/Goma"
     }
 ]

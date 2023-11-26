@@ -1,6 +1,7 @@
 import {createBrowserRouter} from 'react-router-dom';
 import Layout from '../components/layouts/Layout';
 import { Home, About, Contact, Programme, Blogue, Don } from '../pages';
+import Processus from '../pages/Processus';
 
 
 const rootApp=createBrowserRouter([
@@ -28,6 +29,10 @@ const rootApp=createBrowserRouter([
             {
                 path: '/don',
                 element: <Don />
+            },
+            {
+                path: '/process',
+                element: <Processus/>
             }
         ]
     } ,
