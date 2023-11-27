@@ -1,8 +1,11 @@
-import React from 'react'
-
+import { Article, Bannier, HomeSectionFive } from "../components"
 const Blogue = () => {
   return (
-    <div>Bloque</div>
+    <div>
+      <Bannier/>
+      <Article/>
+      <HomeSectionFive/>
+    </div>
   )
 }
 

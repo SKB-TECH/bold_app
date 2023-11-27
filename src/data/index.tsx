@@ -360,3 +360,6 @@ export const programme4=[
         ]
     }
 ]
+
+
+export const banniers=["Des histoires inspirantes et motivantes"," Des Articles ", "Des Informations en Temps reel","Des Temoignages"]
