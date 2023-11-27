@@ -18,7 +18,7 @@ const NewsletterContextProvider = ({ children }: any) => {
 
     const subscribeAction = async (data: newLettersData) => {
         try {
-            const res = await toast.promise(subscribe(data), toastOption);
+             await toast.promise(subscribe(data), toastOption);
            
         } catch (e) {
             errorMessageHadler(e)
@@ -27,7 +27,7 @@ const NewsletterContextProvider = ({ children }: any) => {
 
     const unsubscribeAction = async (data: newLettersData) => {
         try {
-            const res = await toast.promise(unsubscribe(data), toastOption);
+            await toast.promise(unsubscribe(data), toastOption);
 
         } catch (e) {
             errorMessageHadler(e)
