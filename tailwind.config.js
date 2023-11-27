@@ -62,6 +62,7 @@ export default {
         'main-bg': '#ffffff',
         'main-dark-bg': '#20232A',
         'secondary-dark-bg': '#121212',
+        'dark-m':'#181a2a',
         'light-gray': '#F7F7F7',
         'half-transparent': 'rgba(0, 0, 0, 0.5)',
         'rouge':'#af2e16'
