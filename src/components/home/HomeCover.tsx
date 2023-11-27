@@ -6,7 +6,7 @@ import { Button } from '..'
 const HomeCover = () => {
   return (
     <div>
-      <div className='cover  z-0 mt-14 h-[36rem] 3xl:h-[50rem]'>
+      <div className='accueil  z-0 mt-14 h-[40rem] 3xl:h-[50rem]'>
          <div className='bg-gradient-to-r from-black padding-container  min-h-full flex flex-col justify-center gap-10'>
             
             {

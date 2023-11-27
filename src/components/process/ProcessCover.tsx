@@ -1,9 +1,8 @@
-import { namePages } from '../../data'
 
 const ProcessCover = () => {
   return (
     <div>
-      <div className='cover  z-0 mt-14 h-[30rem] 3xl:h-[50rem]'>
+      <div className='contact z-0 mt-14 h-[30rem] 3xl:h-[50rem]'>
          <div className='bg-gradient-to-r from-black padding-container flexCenter  min-h-full flex flex-col justify-center gap-10'>
            
                     

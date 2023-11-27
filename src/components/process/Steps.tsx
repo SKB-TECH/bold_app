@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { message, Steps, DatePicker, Input, AutoComplete, Form } from 'antd';
+import { message, Steps, DatePicker, Input, AutoComplete} from 'antd';
 import { statut, dontype} from '../../data';
 import {useNavigate} from 'react-router-dom';
 
