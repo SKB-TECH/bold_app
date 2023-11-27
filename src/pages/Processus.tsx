@@ -1,4 +1,4 @@
-import { HomeSectionFive, ProcessCover, Souscription } from "../components"
+import { HomeSectionFive, Souscription } from "../components"
 
 const Processus = () => {
   return (

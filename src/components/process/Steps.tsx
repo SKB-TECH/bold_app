@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { message, Steps, DatePicker, Input, AutoComplete, Form } from 'antd';
+import { message, Steps, DatePicker, Input, AutoComplete } from 'antd';
 import { statut, dontype} from '../../data';
 import {useNavigate} from 'react-router-dom';
 
@@ -51,7 +51,8 @@ const steps = [
            }}/>
            <div className="w-full flex flex-col items-center">
             { 
-                donInput.type === "financier" ? (<Input type="text" className="w-full md:w-[50%]  h-10 p-2 outline-none" placeholder="Montant  "/>):(
+              // @ts-ignore
+                donInput?.type === "financier" ? (<Input type="text" className="w-full md:w-[50%]  h-10 p-2 outline-none" placeholder="Montant  "/>):(
                 <Input type="text" className="w-full md:w-[50%]  h-10 p-2 outline-none" placeholder="Nom du materiel  "/>)
             }
            </div>
