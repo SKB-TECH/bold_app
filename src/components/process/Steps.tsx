@@ -7,7 +7,10 @@ const App: React.FC = () => {
 
   const router=useNavigate();
   const [current, setCurrent] = useState(0);
-  const [donInput,setDonInput]=useState({})
+  const [donInput,setDonInput]=useState({
+    type: "",
+    categorie: ""
+  })
   const next = () => {
     setCurrent(current + 1);
   };
@@ -51,7 +54,7 @@ const steps = [
            }}/>
            <div className="w-full flex flex-col items-center">
             { 
-                donInput.type === "financier" ? (<Input type="text" className="w-full md:w-[50%]  h-10 p-2 outline-none" placeholder="Montant  "/>):(
+                donInput?.type === "financier" ? (<Input type="text" className="w-full md:w-[50%]  h-10 p-2 outline-none" placeholder="Montant  "/>):(
                 <Input type="text" className="w-full md:w-[50%]  h-10 p-2 outline-none" placeholder="Nom du materiel  "/>)
             }
            </div>
