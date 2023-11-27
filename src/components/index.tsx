@@ -23,3 +23,8 @@ export {default as Contact} from './don/Contact';
 export {default as ProcessCover} from './process/ProcessCover';
 export {default as Souscription} from './process/Souscription';
 export {default as Steps} from './process/Steps';
+export {default as ProgrammeI} from './programme/ProgrammeI';
+export {default as ProgrammeII} from './programme/ProgrammeII';
+export {default as ProgrammeIII} from './programme/ProgrammeIII';
+export {default as ProgrammeIV} from './programme/ProgrammeIV';
+export {default as ProgrammeCover} from './programme/ProgrammeCover';

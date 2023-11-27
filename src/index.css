@@ -161,8 +161,8 @@ body{
     scrollbar-width: none; /* Firefox */
   }
 
-  .cover{
-    background-image: url("../src/assets/filles.png");
+  .programme{
+    background-image: url("../src/assets/filleBold.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -182,3 +182,31 @@ body{
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  .accueil{
+    background-image: url("../src/assets/modelp.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .about{
+    background-image: url("../src/assets/modela.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .don{
+    background-image: url("../src/assets/models.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .contact{
+    background-image: url("../src/assets/model1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  

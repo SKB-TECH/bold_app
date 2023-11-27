@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { useEffect } from "react";
 import { dons} from "../../data";
-import objectif from '../../assets/femmev.jpeg'
+import objectif from '../../assets/model3.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
