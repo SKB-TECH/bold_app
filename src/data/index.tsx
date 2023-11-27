@@ -271,3 +271,33 @@ export const coordonne=[
         value: "Rdc/Nord-kivu/Goma"
     }
 ]
+
+export const statut=[
+    {
+        label:"Personnel",
+        value: "personnel"
+    },
+    {
+        label:"Entreprise",
+        value: "entreprise"
+    },
+    {
+        label:"ONG",
+        value: "ong",
+    },
+    {
+        label:"Asbl",
+        value: 'asbl'
+    }
+]
+
+export const dontype=[
+    {
+        label:"Materiel",
+        value: 'materiel'
+    },
+    {
+        label:'Financier',
+        value: 'financier'
+    }
+]
