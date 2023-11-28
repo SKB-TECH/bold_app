@@ -301,3 +301,65 @@ export const dontype=[
         value: 'financier'
     }
 ]
+
+
+export const programme1=[
+    {
+        title:"Impliquées",
+        resume:[
+            {
+                paragraphe: 'C’est un programme qui consiste à manifester le leadership des femmes à travers des actions concrètes pouvant améliorer la condition de vie de leurs pairs et dans leurs communautés et leurs pays.'
+            },
+            {
+                paragraphe:'C’est grâce à ce programme que les femmes et les filles développeront des plans d’actions visant à appuyer la bonne gouvernance dans leurs pays ainsi que les compétences sur lesquelles sont construites leur résilience économique. Impliquées aux cotés des autres femmes, INVOLVED constitue également un réseau national réunissant des femmes et des filles au niveau national. '
+            },
+            {
+                paragraphe: 'BOLD soutient le développement des initiatives économiques des femmes et des filles afin de favoriser leur autonomie financière et leur doter de pouvoir et des capacités pour répondre à leurs besoins et ceux de leurs familles.'
+            }
+        ]
+    }
+]
+
+
+export const programme2=[
+    {
+        title: 'La parole audacieuse ',
+        resume:[
+            {
+                paragraphe: 'Ces discussions vont d’un cercle de confiance entre femmes pour échanger sur des sujets qui les préoccupent et partager des témoignages aux émissions préenregistrées pour sensibiliser et atteindre une audience plus large et diversifiée selon les thématiques choisis.'
+            },
+            {
+                paragraphe: 'Il s’agit ainsi d’un cadre d’échange sur les défis intersectoriels auxquels font face les femmes et les filles en Afrique Central, de l’Est et globalement méritent qu’on y apporte une attention particulière.'
+            }
+        ]
+    }
+]
+
+
+export const programme3=[
+    {
+        title: 'Éducation adaptée pour un futur ',
+        resume: [
+            {
+                paragraphe:'Consiste en un programme de formation innové et adapté aux besoins des communautés selon leur contexte et évolution.'
+            },
+            {
+                paragraphe: 'Il s’agit d’une éducation basée sur les besoins de changement à apporter dans les communautés. Il s’agit d’un curriculum de développement des capacités personnelles pouvant permettre aux femmes et aux jeunes filles et garçons d’acquérir des capacités rapidement et efficacement pour de constituer une ressource humaine, économique et utile pour sa communauté.'
+            }
+        ]
+    }
+]
+
+export const programme4=[
+    {
+        title: 'Solutions pour le Climat',
+        resume:[
+            {
+                paragraphe: 'La prévention des catastrophes, la protection de l’environnement et les jardins'
+            }
+        ]
+    }
+]
+
+
+export const banniers=["Des histoires inspirantes et motivantes"," Des Articles ", "Des Informations en Temps reel","Des Temoignages"]

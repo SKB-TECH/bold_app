@@ -38,7 +38,7 @@ body{
     }
   
     .padding-container {
-      @apply px-3 md:px-20 3xl:px-20 lg:px-20 ;
+      @apply px-3 md:px-20 3xl:px-36 lg:px-20 ;
     }
   
     .flexCenter {
@@ -161,8 +161,8 @@ body{
     scrollbar-width: none; /* Firefox */
   }
 
-  .cover{
-    background-image: url("../src/assets/filles.png");
+  .programme{
+    background-image: url("../src/assets/filleBold.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -182,3 +182,31 @@ body{
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  .accueil{
+    background-image: url("../src/assets/modelp.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .about{
+    background-image: url("../src/assets/modela.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .don{
+    background-image: url("../src/assets/models.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .contact{
+    background-image: url("../src/assets/model1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  

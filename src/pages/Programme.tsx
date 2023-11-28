@@ -1,9 +1,14 @@
-import React from 'react'
+import { HomeSectionFive, ProgrammeCover, ProgrammeI, ProgrammeII, ProgrammeIII, ProgrammeIV } from '../components'
 
 const Programme = () => {
   return (
     <div>
-      programme
+      <ProgrammeCover/>
+      <ProgrammeI/>
+      <ProgrammeII/>
+      <ProgrammeIII/>
+      <ProgrammeIV/>
+      <HomeSectionFive/>
     </div>
   )
 }

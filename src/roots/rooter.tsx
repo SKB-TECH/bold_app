@@ -1,7 +1,8 @@
 import {createBrowserRouter} from 'react-router-dom';
 import Layout from '../components/layouts/Layout';
-import { Home, About, Contact, Programme, Blogue, Don } from '../pages';
+import { Home, About, Contacts, Programme, Blogue, Don, Ready } from '../pages';
 import Processus from '../pages/Processus';
+import LayoutBlogue from '../components/layouts/LayoutBlogue';
 
 
 const rootApp=createBrowserRouter([
@@ -20,7 +21,7 @@ const rootApp=createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <Contact/>
+                element: <Contacts/>
             },
             {
                 path: '/programme',
@@ -37,8 +38,19 @@ const rootApp=createBrowserRouter([
         ]
     } ,
     {
-        path:'/blogue',
-        element: <Blogue/>
+        path:'/',
+        element: <LayoutBlogue/>,
+        children: [
+            {
+                path: '/blogue',
+                element: <Blogue/>
+            },
+            {
+                path: '/article/:id',
+                element: <Ready/>
+            }
+        ]
+        
     }
 ])
 
