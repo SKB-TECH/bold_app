@@ -8,3 +8,5 @@ export {default as Programme} from './Programme';
 export {default as Don} from './Don';
 export {default as Processu} from './Processus';
 export {default as Ready} from './Ready';
+export {default as Dashbord} from './Dashbord';
+export {default as Login} from './Login';
