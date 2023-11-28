@@ -1,15 +1,18 @@
 import log from '../../assets/logo.png';
 import { FaRegCalendarAlt } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 interface Blogue {
     img?:string;
     title?:string;
     type: string;
-    id?:string;
+    id?:"9009";
     dates?: string
 }
 
-const CardBlog = ({img,title,type,dates}:Blogue) => {
+const CardBlog = ({img,title,type,id,dates}:Blogue) => {
+  const router=useNavigate();
+
   return (
     <div className="flex flex-col gap-5 w-[100%] md:w-80 md:h-[27rem] bg-white border rounded-lg p-3 hover:drop-shadow-md translate ease-in duration-300">
           <img src={img} alt="" className='rounded-lg'/>
@@ -17,7 +20,7 @@ const CardBlog = ({img,title,type,dates}:Blogue) => {
               {type}
           </span>
 
-          <h2 className="bold-20 hover:underline">
+          <h2 className="bold-20 hover:underline" onClick={()=>router(`/article/${id}`)}>
             {title}
           </h2>
           <div className='flex justify-between gap-3'>
