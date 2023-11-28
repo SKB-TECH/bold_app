@@ -7,3 +7,4 @@ export {default as Blogue} from './Blogue';
 export {default as Programme} from './Programme';
 export {default as Don} from './Don';
 export {default as Processu} from './Processus';
+export {default as Ready} from './Ready';

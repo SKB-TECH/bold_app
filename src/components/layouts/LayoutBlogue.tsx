@@ -1,4 +1,4 @@
-import { NavbarBlogue, Footer } from '..';
+import { NavbarBlogue, Footer, HomeSectionFive} from '..';
 import {Outlet} from 'react-router-dom'
 
 function LayoutBlogue() {
@@ -8,6 +8,7 @@ function LayoutBlogue() {
             <main className="relative overflow-hidden">
             <Outlet />
             </main>
+            <HomeSectionFive/>
             <Footer />
         </div>
     );
