@@ -37,7 +37,7 @@ export const removeLocalStorageItem = (name: string) => {
 export const toastOption = {
     loading: 'Traitement en cours',
     success: 'Traitement reussi',
-    error: 'Erreur lors du traitement',
+    error: (err: any) => `${err?.response.data.message.toString()}`,
 }
 
 export const errorMessageHadler = (error: any) => {
