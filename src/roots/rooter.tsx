@@ -1,6 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom';
 import Layout from '../components/layouts/Layout';
-import { Home, About, Contacts, Programme, Blogue, Don, Ready } from '../pages';
+import { Home, About, Contacts, Programme, Blogue, Don, Ready, Dashbord, Login } from '../pages';
 import Processus from '../pages/Processus';
 import LayoutBlogue from '../components/layouts/LayoutBlogue';
 
@@ -51,6 +51,15 @@ const rootApp=createBrowserRouter([
             }
         ]
         
+    },
+
+    {
+        path: '/bold/login',
+        element: <Login/>
+    },
+    {
+        path: '/bold/dashbord',
+        element: <Dashbord />
     }
 ])
 
