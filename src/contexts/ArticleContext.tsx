@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useState, createContext } from 'react';
-import toast from 'react-hot-toast';
 import { errorMessageHadler } from '../utils';
 import axios from 'axios';
 import { BASE_URL } from '../utils/config';
@@ -14,7 +13,7 @@ type ArticleContextProviderProps = {
 
 export const ArticleContext = createContext<ArticleContextValue | null>(null);
 
-export default function UserContextPRovider({ children }: ArticleContextProviderProps) {
+export default function ArticleContextProvider({ children }: ArticleContextProviderProps) {
     const [articles, setArticles] = useState([]);
 
     const allPostedArticles = async () => {
@@ -38,6 +37,7 @@ export default function UserContextPRovider({ children }: ArticleContextProvider
         </ArticleContext.Provider>
     )
 }
+
 
 export function useArticleContext() {
     const context = React.useContext(ArticleContext);

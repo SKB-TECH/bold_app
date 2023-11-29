@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState, createContext } from 'react';
 import toast from 'react-hot-toast';
 import { getAllUsers, login, recoveryPwdToken, updateUser, valideAccount } from './api/user';
-import { errorMessageHadler, removeLocalStorageItem, saveToLocalStorage, toastOption } from '../utils';
+import { errorMessageHadler, getLocalStorageItem, removeLocalStorageItem, saveToLocalStorage, toastOption } from '../utils';
 import axios from 'axios';
 import { BASE_URL } from '../utils/config';
 
@@ -93,7 +93,18 @@ export default function UserContextPRovider({ children }: UserContextProviderPro
         setUserConnected(null)
         setToken(null)
     }
+    const getUserLocal = () => {
+        const localUserData = getLocalStorageItem("greenUser");
+        const localToken = getLocalStorageItem("token");
+        setUserConnected(localUserData);
+        setToken(localToken);
+    };
 
+    useEffect(() => {
+        getUserLocal();
+
+        console.log(token, userConnected)
+    }, [])
     return (
         <UserContext.Provider value={{ users, userConnected, token, setUserConnected, handleLogin, allUsers, logOut }}>
             {children}

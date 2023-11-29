@@ -63,12 +63,11 @@ const rootApp = createBrowserRouter([
         element: <LayoutDashboard />,
         children: [
             {
-                path: '/dashboard',
+                path: '/bold/dashboard',
                 element: <Dashbord />
             },
         ]
     }
 ])
-
 
 export default rootApp;

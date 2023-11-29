@@ -2,6 +2,7 @@ import React, { createContext } from 'react';
 import NavigationContextProvider from './NavigationContext';
 import NewsletterContextProvider from './NewlettersContext';
 import UserContextPRovider from './UserContext';
+import ArticleContextProvider from './ArticleContext';
 
 interface AppContextValue {
     currentPath: string;
@@ -17,9 +18,11 @@ function AppContexProvider({ children }: any) {
         <NavigationContextProvider>
             <UserContextPRovider>
                 <NewsletterContextProvider>
-                    <AppContext.Provider value={{ currentPath, setCurrentPath }}>
-                        {children}
-                    </AppContext.Provider>
+                    <ArticleContextProvider>
+                        <AppContext.Provider value={{ currentPath, setCurrentPath }}>
+                            {children}
+                        </AppContext.Provider>
+                    </ArticleContextProvider>
                 </NewsletterContextProvider>
             </UserContextPRovider>
         </NavigationContextProvider>
