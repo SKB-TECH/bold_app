@@ -30,7 +30,7 @@ const Presentation = () => {
                    {
                     apropos.map((item)=>(
                         item.resume.map((par)=>(
-                            <p className=" regular-20 md:regular-20  text-justify">
+                            <p className="regular-14 md:regular-16 3xl:regular-32 text-justify">
                                 {
                                     par.paragraphe
                                 }

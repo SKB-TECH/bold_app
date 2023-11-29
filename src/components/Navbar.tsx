@@ -84,11 +84,11 @@ const Navbar = () => {
         }`}>
       <div className='flex justify-between items-center  w-full h-full padding-container'>
           <Link to="/">
-          <img src={logo} width={120} height={100} alt="logo" />
+          <img src={logo} width={100} height={100} alt="logo" />
         </Link>
           {/* les routes  */}
-          <div className="hidden md:flex justify-around ">
-            <ul className="flex justify-around list-none gap-12 ml-32  h-full">
+          <div className="hidden md:flex justify-around ml-14">
+            <ul className="flex flexCenter w-full list-none gap-10 padding-container  h-full">
                 {
                   links.map((item,index)=>(
                     <li className="text-gray-300 h-full justify-center">
