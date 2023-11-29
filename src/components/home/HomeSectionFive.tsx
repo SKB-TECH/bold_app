@@ -1,12 +1,14 @@
-import  { useState } from 'react'
+import { useContext, useState } from 'react'
 import { resnews } from '../../data'
 import { Toaster } from 'react-hot-toast';
 import { subscribe } from '../../contexts/api/newsletter';
 import { errorMessageHadler } from '../../utils';
+import { NavigationContext } from '../../contexts/NavigationContext';
 
 const HomeSectionFive = () => {
   // @ts-ignore
   // const { subscribeAction } = useContext(NewsletterContext);
+
 
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
@@ -36,7 +38,7 @@ const HomeSectionFive = () => {
         <input type={"text"} placeholder='Noms ' onChange={e => setName(e.target.value)} className='p-2 outline-none  w-[99%]   md:w-[93%] h-10 border border-gray-400 rounded-md ' />
         <input type={"emvotrwail"} placeholder='Addresse email ' onChange={e => setMail(e.target.value)} className='p-2 outline-none  w-[99%] md:w-[93%] h-10 border border-gray-400 rounded-md' />
         <button
-          onClick={() => subscribeAction({ name,mail })}
+          onClick={() => subscribeAction({ name, mail })}
           className='outline-none w-[99%]  md:w-[93%] h-10 border border-gray-400  rounded-md bg-rouge text-white bold-18'
         >
           S'Inscrire

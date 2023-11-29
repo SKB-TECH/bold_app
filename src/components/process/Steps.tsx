@@ -81,7 +81,6 @@ const App: React.FC = () => {
     }
   }
 
-
   const steps = [
     {
       title: <h5 className='text-white bold-10'>Identite</h5>,
@@ -158,7 +157,7 @@ const App: React.FC = () => {
         )}
         {current === steps.length - 1 && (
           <button disabled={!valid()}
-            onClick={() => { soutienAction(donInput);  }}
+            onClick={() => { soutienAction(donInput); }}
             className='bg-rouge text-white h-12 rounded-lg shadow md:w-60 w-[100%] '>
             Envoyer
           </button>

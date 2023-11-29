@@ -32,12 +32,12 @@ const NewsletterContextProvider = ({ children }) => {
     const unsubscribeAction = async (data: newLettersData) => {
         try {
             await toast.promise(unsubscribe(data), toastOption);
-
         } catch (e) {
             errorMessageHadler(e)
         }
     }
 
+    
     return (
         <NewsletterContext.Provider value={{ subscribeAction, unsubscribeAction }}>
             {children}
