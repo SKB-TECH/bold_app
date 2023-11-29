@@ -1,26 +1,32 @@
 import { MdEmail, MdLocationOn,  MdFax } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
-
+import moment from "moment/moment";
 
 export const links=[
+  {
+    
+      title: 'Accueil',
+      link: ''
+  }
+  ,
+  {
+      title: 'apropos',
+      link: 'apropos'
+  },
     {
         title: 'Nos programmes',
         link: 'programme'
     },
     {
-        title: 'blogue',
+        title: 'blog',
         link: 'blogue'
     },
     {
-        title: 'apropos',
-        link: 'apropos'
-    },
-    {
-        title: 'faire un don',
+        title: 'Soutenir',
         link: 'don'
     },
     {
-        title: 'Rejoignez-nous',
+        title: 'Contact',
         link: 'contact'
     },
 ]
@@ -226,14 +232,14 @@ export const otherdon=[
                 sub_title:"Devenir un champion de la paix ",
                 paragraphe:"Organisez un événement pour recueillir des fonds, sponsorisez nos événements, apportez un soutien en nature ou soutenez-nous par le biais de votre entreprise."
             },
-            {
-                sub_title: "Mieux nous connaître ",
-                paragraphe: "Abonnez-vous à notre newsletter, partagez nos publications et blogs et suivez notre travail sur les réseaux sociaux."
-            },
-            {
-                sub_title:"Faire un legs",
-                paragraphe: " laissez un don à International Alert dans votre testament et continuez à exercer une influence pendant des années."
-            }
+            // {
+            //     sub_title: "Mieux nous connaître ",
+            //     paragraphe: "Abonnez-vous à notre newsletter, partagez nos publications et blogs et suivez notre travail sur les réseaux sociaux."
+            // },
+            // {
+            //     sub_title:"Faire un legs",
+            //     paragraphe: " laissez un don à International Alert dans votre testament et continuez à exercer une influence pendant des années."
+            // }
         ],
 
         paragraphe: "C’est grâce au soutien de chacun que nous pourrons instaurer la paix que les populations recherchent et méritent.",
@@ -363,3 +369,255 @@ export const programme4=[
 
 
 export const banniers=["Des histoires inspirantes et motivantes"," Des Articles ", "Des Informations en Temps reel","Des Temoignages"]
+
+// second part
+export const cardsData = [
+    {
+      title: "Revenue",
+      change: 24,
+      amount: 42056,
+    },
+    {
+      title: "Orders",
+      change: -14,
+      amount: 52125.03,
+    },
+    {
+      title: "Expenses",
+      change: 18,
+      amount: 1216.5,
+    },
+    {
+      title: "Profit",
+      change: 12,
+      amount: 10125.0,
+    },
+  ];
+  
+  export const ordersData = [
+    {
+      name: "Skatebnoard",
+      type: "Illustration",
+      items: 58,
+      change: 290,
+    },
+    {
+      name: "Language courses",
+      type: "Illustration",
+      items: 12,
+      change: 72
+    },
+    {
+      name: "Office Collaboration",
+      type: "Illustration",
+      items: 7,
+      change: 70
+    },
+    {
+      name: "Robot",
+      type: "Illustration",
+      items: 21,
+      change: 15
+    }
+  ]
+  
+  
+  //* get the value in group number format
+  export const groupNumber = (numb:number) => {
+    return parseFloat(numb.toFixed(2)).toLocaleString("en", {
+      useGrouping: true,
+    });
+  };
+  
+  
+  //* calendar Events
+  let eventGuid = 0
+  let todayStr = moment().format("YYYY-MM-DD")  // YYYY-MM-DD of today
+  export const INITIAL_EVENTS = [
+    {
+      id: createEventId(),
+      title: 'Lunch Pary',
+      start: todayStr + 'T09:00:00',
+  
+    },
+    {
+      id: createEventId(),
+      title: 'Timed event',
+      start: moment(todayStr).add(1, "days").format("YYYY-MM-DD") + 'T16:00:00'
+    },
+    {
+      id: createEventId(),
+      title: "Head Meetup",
+      start: moment(todayStr).add(2, "days").format("YYYY-MM-DD") + 'T20:00:00'
+    },
+    {
+      id: createEventId(),
+      title: "VC Meeting",
+      start: moment(todayStr).add(3, "days").format("YYYY-MM-DD") + 'T09:00:00'
+    },
+    {
+      id: createEventId(),
+      title: "Payment Shedules",
+      start: moment(todayStr).add(5, "days").format("YYYY-MM-DD") + 'T13:00:00'
+    },
+    {
+      id: createEventId(),
+      title: "VC Meeting",
+      start: moment(todayStr).add(6, "days").format("YYYY-MM-DD") + 'T13:00:00'
+    },
+  ]
+  
+  export function createEventId() {
+    return String(eventGuid++)
+  }
+  
+  
+  // * tasks
+  export const boardData = {
+    columns: [
+      {
+        id: 1,
+        title: "Backlog",
+        cards: [
+          {
+            id: 1,
+            title: "Database Setup",
+            description: "Firebase Integration"
+          },
+          {
+            id: 2,
+            title: "Data Flow",
+            description: "Setup Diagram with other developers"
+          },
+        ]
+      },
+      {
+        id: 2,
+        title: "TODO",
+        cards: [
+          {
+            id: 9,
+            title: "Data Table Page",
+            description: "Server side Pagination",
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "Doing",
+        cards: [
+          {
+            id: 10,
+            title: "Full Calendar Extension",
+            description: "Make new events and store in global states"
+          },
+          {
+            id: 11,
+            title: "Custom Kanban Board",
+            description: "Setup react-kanban dep within Dashboard as seperate page"
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "Completed",
+        cards: [
+          {
+            id: 12,
+            title: "Vite Server Setup",
+            description: "Configure required modules and starters"
+          },
+          {
+            id: 13,
+            title: "Modular structre",
+            description: "Write css in form of modules to reduce the naming conflicts"
+          }
+        ]
+      }
+    ]
+  }
+  
+  
+  // * user table data
+  export const userData = [
+    {
+      name: {
+        firstName: 'John',
+        lastName: 'Doe',
+      },
+      address: '261 Erdman Ford',
+      city: 'East Daphne',
+      state: 'Kentucky',
+    },
+    {
+      name: {
+        firstName: 'Jane',
+        lastName: 'Doe',
+      },
+      address: '769 Dominic Grove',
+      city: 'Columbus',
+      state: 'Ohio',
+    },
+    {
+      name: {
+        firstName: 'Joe',
+        lastName: 'Doe',
+      },
+      address: '566 Brakus Inlet',
+      city: 'South Linda',
+      state: 'West Virginia',
+    },
+    {
+      name: {
+        firstName: 'Kevin',
+        lastName: 'Vandy',
+      },
+      address: '722 Emie Stream',
+      city: 'Lincoln',
+      state: 'Nebraska',
+    },
+    {
+      name: {
+        firstName: 'Joshua',
+        lastName: 'Rolluffs',
+      },
+      address: '32188 Larkin Turnpike',
+      city: 'Charleston',
+      state: 'South Carolina',
+    }, {
+      name: {
+        firstName: 'Jane',
+        lastName: 'Doe',
+      },
+      address: '769 Dominic Grove',
+      city: 'Columbus',
+      state: 'Ohio',
+    },
+    {
+      name: {
+        firstName: 'Joe',
+        lastName: 'Doe',
+      },
+      address: '566 Brakus Inlet',
+      city: 'South Linda',
+      state: 'West Virginia',
+    },
+    {
+      name: {
+        firstName: 'Kevin',
+        lastName: 'Vandy',
+      },
+      address: '722 Emie Stream',
+      city: 'Lincoln',
+      state: 'Nebraska',
+    },
+    {
+      name: {
+        firstName: 'Joshua',
+        lastName: 'Rolluffs',
+      },
+      address: '32188 Larkin Turnpike',
+      city: 'Charleston',
+      state: 'South Carolina',
+    },
+  ]

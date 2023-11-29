@@ -1,4 +1,4 @@
-import { Input } from "antd"
+import { Input, Form } from "antd"
 import { contact, coordonne } from "../../data"
 
 const Contact = () => {
@@ -17,7 +17,7 @@ const Contact = () => {
            ))}
       </div>
 
-      <div className="w-[98%] md:w-[60%] h-full bg-main-bg hover:shadow  border border-gray-300 flex flex-col gap-3 p-6">
+      <Form className="w-[98%] md:w-[60%] h-full bg-main-bg hover:shadow flex flex-col gap-3 p-6 border border-rouge-100">
         {
             contact.map((items)=>(
                 <>
@@ -26,7 +26,7 @@ const Contact = () => {
                 </>
             ))
         }
-        <div className="w-full h-full flex flex-col gap-3">
+        <div className="w-full h-full flex flex-col gap-3 ">
             <div className="w-[100%] flex  flex-col md:flex-row gap-3 justify-around">
                 <Input type="text" className="w-full md:w-[50%]  h-10 p-2 outline-none" placeholder="Noms  "/>
                 <Input type="email" className="w-full  md:w-[50%] h-10 p-2 outline-none" placeholder="Email"/>
@@ -36,7 +36,7 @@ const Contact = () => {
             </div>
             <button className='outline-none w-[100%]  h-10 border border-gray-400  rounded-md bg-rouge text-white bold-18'>Envoye</button>
         </div>
-      </div>
+      </Form>
     </section>
   )
 }

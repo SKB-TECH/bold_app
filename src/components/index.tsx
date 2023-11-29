@@ -34,3 +34,4 @@ export {default as Bannier} from './blogue/Bannier';
 export {default as Card} from './blogue/Card';
 export {default as Article} from './blogue/Article';
 export {default as CardBlog} from './elements/CardBlog';
+export {default as LayoutDash} from './dashbord/Layout/LayoutDash';

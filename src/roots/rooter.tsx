@@ -3,7 +3,7 @@ import Layout from '../components/layouts/Layout';
 import { Home, About, Contacts, Programme, Blogue, Don, Ready, Dashbord, Login } from '../pages';
 import Processus from '../pages/Processus';
 import LayoutBlogue from '../components/layouts/LayoutBlogue';
-
+import { LayoutDash } from '../components';
 
 const rootApp=createBrowserRouter([
     {
@@ -57,9 +57,15 @@ const rootApp=createBrowserRouter([
         path: '/bold/login',
         element: <Login/>
     },
-    {
-        path: '/bold/dashbord',
-        element: <Dashbord />
+    {   
+        
+        element: <LayoutDash/>,
+        children:[
+            {
+                path: '/bold/dashbord',
+                element: <Dashbord />
+            }
+        ]
     }
 ])
 

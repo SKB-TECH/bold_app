@@ -17,7 +17,7 @@ const ProgrammeI = () => {
       })
     
   return (
-    <section className='w-full md:h-[25rem] bg-main-bg flex flex-col flexCenter padding-container mb-10 md:mb-32'>
+    <section className='w-full md:h-[25rem] bg-main-bg flex flex-col md:mt-10 flexCenter padding-container mb-10 md:mb-32'>
         <div  className="flex flex-col md:flex-row flexCenter gap-10  mt-14 lg:mt-24 h-full w-full">
             <div className="rounded-lg h-full shadow-md" data-aos="fade-down-left"> 
                         <img src={objectif} alt="picture" width={500} height={200} className="rounded-lg h-full bg-cover"/>
@@ -32,7 +32,7 @@ const ProgrammeI = () => {
                    {
                     programme1.map((item)=>(
                         item.resume.map((par)=>(
-                            <p className=" regular-20 md:regular-20  text-justify">
+                            <p className=" regular-14 md:regular-16 3xl:regular-32 text-justify">
                                 {
                                     par.paragraphe
                                 }
