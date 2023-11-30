@@ -22,7 +22,6 @@ export const NewsletterContext = createContext();
 const NewsletterContextProvider = ({ children }) => {
     const subscribeAction = async (data: newLettersData) => {
         try {
-            console.log("first")
             await toast.promise(subscribe(data), toastOption);
         } catch (e) {
             errorMessageHadler(e)

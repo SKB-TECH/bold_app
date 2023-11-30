@@ -75,7 +75,6 @@ const App: React.FC = () => {
   const soutienAction = (data: any) => {
     try {
       const res = soutien(data);
-      console.log(res);
     } catch (e) {
       errorMessageHadler(e)
     }
