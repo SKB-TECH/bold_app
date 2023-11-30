@@ -25,7 +25,7 @@ const steps = [
     {
       title: <h5 className='text-white bold-10'>Identite</h5>,
       content: 
-      <Form className='w-full flex flex-col md:h-[30rem] gap-5 items-center md:mt-14  p-3 3xl:-mt-80'>
+      <Form className='w-full flex flex-col md:h-[30rem] gap-5 items-center md:mt-14  p-3 '>
            <AutoComplete placeholder={"Votre statut"} className="w-full md:w-[50%]  outline-none" size='large' options={statut} filterOption={true} onChange={(value:string)=>{
                 setDonInput({...donInput,categorie:value})
            }}/>
@@ -38,7 +38,7 @@ const steps = [
     {
       title: <h5 className='text-white bold-10'>Addresse</h5>,
       content: 
-      <Form className='w-full flex flex-col md:h-[30rem] gap-5 items-center md:mt-14  p-3 3xl:-mt-80'>
+      <Form className='w-full flex flex-col md:h-[30rem] gap-5 items-center md:mt-14  p-3 '>
            <Input type="text" className="w-full md:w-[50%]  h-10 p-2 outline-none" placeholder="Pays  "/>
            <Input type="text" className="w-full md:w-[50%]  h-10 p-2 outline-none" placeholder="Province  "/>
            <Input type="text" className="w-full md:w-[50%]  h-10 p-2 outline-none" placeholder="Ville  "/>
@@ -48,7 +48,7 @@ const steps = [
     {
       title: <h5 className='text-white bold-10'>Mon Soutien</h5>,
       content: 
-      <Form className='w-full flex flex-col md:h-[30rem] gap-5 items-center md:mt-14  p-3 3xl:-mt-80'>
+      <Form className='w-full flex flex-col md:h-[30rem] gap-5 items-center md:mt-14  p-3'>
            <AutoComplete filterOption={true} placeholder={"type de don "} className="w-full md:w-[50%]  outline-none" size='large' options={dontype} onChange={(value:string)=>{
                              setDonInput({...donInput,type:value})
            }}/>
