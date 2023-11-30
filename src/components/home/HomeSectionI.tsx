@@ -12,7 +12,7 @@ const HomeSectionI = () => {
             <div className={"w-[95%] md:w-[60%] md:p-6 flex flex-col gap-5"} >
                    {
                     mission.map((item)=>(
-                    <p className=" regular-20 md:regular-32 3xl:regular-40 text-justify">
+                    <p className=" regular-14 md:regular-20 3xl:regular-32 text-justify">
                       {
                         item.parama1
                       }

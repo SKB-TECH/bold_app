@@ -30,7 +30,7 @@ const Comment = () => {
                             item?.detail?.map((it)=>(
                                <>
                                 <p className="bold-18">{it.sub}</p>
-                                <Timeline items={it.resume} style={{fontSize:'18px'}} className="md:flexCenter md:gap-5  md:regular-18"/>
+                                <Timeline items={it.resume} style={{fontSize:'18px'}} className="md:flexCenter md:gap-5  regular-14 md:regular-16 3xl:regular-32"/>
                                </>
                             ))
                         
