@@ -1,31 +1,32 @@
-import {createBrowserRouter} from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../components/layouts/Layout';
 import { Home, About, Contacts, Programme, Blogue, Don, Ready, Dashbord, Login } from '../pages';
 import Processus from '../pages/Processus';
 import LayoutBlogue from '../components/layouts/LayoutBlogue';
-import { LayoutDash } from '../components';
+import LayoutDashboard from '../components/layouts/LayoutDashboard';
 
-const rootApp=createBrowserRouter([
+
+const rootApp = createBrowserRouter([
     {
         path: '/',
         element: <Layout />,
         children: [
             {
                 path: '/',
-                element: <Home/>
+                element: <Home />
             },
-            
+
             {
                 path: '/apropos',
                 element: <About />
             },
             {
                 path: '/contact',
-                element: <Contacts/>
+                element: <Contacts />
             },
             {
                 path: '/programme',
-                element: <Programme/>
+                element: <Programme />
             },
             {
                 path: '/don',
@@ -33,41 +34,40 @@ const rootApp=createBrowserRouter([
             },
             {
                 path: '/process',
-                element: <Processus/>
+                element: <Processus />
             }
         ]
-    } ,
+    },
     {
-        path:'/',
-        element: <LayoutBlogue/>,
+        path: '/',
+        element: <LayoutBlogue />,
         children: [
             {
                 path: '/blogue',
-                element: <Blogue/>
+                element: <Blogue />
             },
             {
                 path: '/article/:id',
-                element: <Ready/>
+                element: <Ready />
             }
         ]
-        
+
     },
 
     {
         path: '/bold/login',
-        element: <Login/>
+        element: <Login />
     },
-    {   
-        
-        element: <LayoutDash/>,
-        children:[
+    {
+        path: '/bold',
+        element: <LayoutDashboard />,
+        children: [
             {
-                path: '/bold/dashbord',
+                path: '/bold/dashboard',
                 element: <Dashbord />
-            }
+            },
         ]
     }
 ])
-
 
 export default rootApp;
