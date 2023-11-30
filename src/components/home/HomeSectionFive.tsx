@@ -16,7 +16,6 @@ const HomeSectionFive = () => {
   const subscribeAction = (data: any) => {
     try {
       const res = subscribe(data);
-      console.log(res);
     } catch (e) {
       errorMessageHadler(e)
     }

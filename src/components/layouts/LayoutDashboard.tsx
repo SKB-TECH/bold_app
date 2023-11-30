@@ -13,20 +13,20 @@ function LayoutDashboard() {
     const { token, userConnected, setUserConnected } = useUserContext();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        setTimeout(() => {
-            const { exp } = jwtDecode(token);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         const { exp } = jwtDecode(token);
 
-            // @ts-ignore
-            if (Date.now() >= exp * 1000) {
-                toast.error('Votre session a expirée !');
-                removeLocalStorageItem("user");
-                removeLocalStorageItem("token");
-                setUserConnected(null);
-                navigate("/bold/login");
-            }
-        }, 3000);
-    });
+    //         // @ts-ignore
+    //         if (Date.now() >= exp * 1000) {
+    //             toast.error('Votre session a expirée !');
+    //             removeLocalStorageItem("user");
+    //             removeLocalStorageItem("token");
+    //             setUserConnected(null);
+    //             navigate("/bold/login");
+    //         }
+    //     }, 3000);
+    // });
 
     useEffect(() => {
         if (userConnected == null || userConnected == undefined)

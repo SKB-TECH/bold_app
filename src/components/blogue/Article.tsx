@@ -14,7 +14,6 @@ const Article = () => {
   const { loading } = useNavigationContext();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(articles?.length / PAGE_SIZE);
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
@@ -27,7 +26,7 @@ const Article = () => {
         <>
           <article className="grid  grid-col-1  md:grid-cols-3 md:grid-rows-6 w-full md:gap-7 mt-10 md:mt-24 justify-center items-center  md:padding-container mb-32 ">
             {currentPageData.map((item: any) => (
-              <CardBlog img={femm} dates={"20/08/2022"} title={item.title} type={"Article"} />
+            <CardBlog img={femm} id={item.idArticle} dates={"20/08/2022"} title={item.title} type={"Article"} />
             ))
             }
           </article>

@@ -88,13 +88,14 @@ export default function UserContextPRovider({ children }: UserContextProviderPro
     }
 
     const logOut = (navigate: any) => {
-        removeLocalStorageItem("greenUser");
+        removeLocalStorageItem("user");
+        removeLocalStorageItem("token");
         navigate("/bold/login")
         setUserConnected(null)
         setToken(null)
     }
     const getUserLocal = () => {
-        const localUserData = getLocalStorageItem("greenUser");
+        const localUserData = getLocalStorageItem("user");
         const localToken = getLocalStorageItem("token");
         setUserConnected(localUserData);
         setToken(localToken);
@@ -102,9 +103,8 @@ export default function UserContextPRovider({ children }: UserContextProviderPro
 
     useEffect(() => {
         getUserLocal();
-
-        console.log(token, userConnected)
     }, [])
+
     return (
         <UserContext.Provider value={{ users, userConnected, token, setUserConnected, handleLogin, allUsers, logOut }}>
             {children}

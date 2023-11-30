@@ -22,9 +22,10 @@ const Login = () => {
         }, [])
 
         useEffect(() => {
-                if (userConnected != null || userConnected != undefined)
+                if (userConnected != null && userConnected != undefined)
                         navigate("/bold/dashboard")
         }, [userConnected])
+
         return (
                 <section className="flex flex-col flexCenter items-cent h-screen w-full">
                         <div className="w-full flex items-center justify-center md:h-[40rem] bg-[#ffffff] h-full padding-container">
