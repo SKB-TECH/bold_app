@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import { Steps, DatePicker, Input, AutoComplete, Form} from 'antd';
 import { statut, dontype} from '../../data';
