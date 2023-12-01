@@ -17,8 +17,8 @@ const ProgrammeII = () => {
       })
     
   return (
-    <section className='w-full md:h-[25rem] bg-main-bg flex flex-col flexCenter padding-container mb-10 md:mb-32'>
-        <div  className="flex flex-col md:flex-row flexCenter gap-10  mt-14 lg:mt-24 h-full w-full">
+    <section className='w-full md:h-[25rem] bg-main-bg flex flex-col flexCenter padding-container mb-10 md:mb-10'>
+        <div  className="flex flex-col md:flex-row flexCenter gap-10  mt-10 h-full w-full">
             
             <div data-aos="fade-down-right" className={"w-[95%] md:w-[900px] md:p-6 flex flex-col gap-2 mt-5 md:mt-0"}>
                <div>

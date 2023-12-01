@@ -4,7 +4,6 @@ const Blogue = () => {
     <div>
       <Bannier/>
       <Article/>
-
     </div>
   )
 }
