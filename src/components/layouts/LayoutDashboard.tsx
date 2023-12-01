@@ -4,29 +4,13 @@ import Footer from '../Footer';
 import { Outlet, useNavigate } from 'react-router-dom'
 import { useUserContext } from '../../contexts/UserContext';
 import { useEffect } from 'react';
-import { jwtDecode } from "jwt-decode";
-import toast from 'react-hot-toast';
-import { removeLocalStorageItem } from '../../utils';
 
 function LayoutDashboard() {
     // @ts-ignore
-    const { token, userConnected, setUserConnected } = useUserContext();
+    const { userConnected} = useUserContext();
     const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         const { exp } = jwtDecode(token);
 
-    //         // @ts-ignore
-    //         if (Date.now() >= exp * 1000) {
-    //             toast.error('Votre session a expirée !');
-    //             removeLocalStorageItem("user");
-    //             removeLocalStorageItem("token");
-    //             setUserConnected(null);
-    //             navigate("/bold/login");
-    //         }
-    //     }, 3000);
-    // });
 
     useEffect(() => {
         if (userConnected == null || userConnected == undefined)
