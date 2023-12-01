@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { namePages } from '../../data'
 
 const AboutCover = () => {
@@ -12,7 +13,7 @@ const AboutCover = () => {
                         <h2 className= ' bold-20 md:bold-40 text-white'>{its.title}</h2>
                         {
                             its.resume.map((it)=>(
-                                <p className='text-white md:w-[600px]   bold-20 md:bold-40'>{it}</p>
+                                <Link to={it.link} className='text-white md:w-[600px]   bold-20 md:bold-40'>{it.title}</Link>
                             ))
                         }
                       </>

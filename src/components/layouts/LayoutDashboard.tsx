@@ -1,16 +1,12 @@
-
-import Navbar from '../Navbar';
-import Footer from '../Footer';
 import { Outlet, useNavigate } from 'react-router-dom'
 import { useUserContext } from '../../contexts/UserContext';
 import { useEffect } from 'react';
+import {SidebarDash } from '..';
 
 function LayoutDashboard() {
     // @ts-ignore
     const { userConnected} = useUserContext();
     const navigate = useNavigate();
-
-
 
     useEffect(() => {
         if (userConnected == null || userConnected == undefined)
@@ -24,11 +20,12 @@ function LayoutDashboard() {
 
     return (
         <div>
-            <Navbar />
-            <main className="relative overflow-hidden">
+         {/* <NavbarDash /> */}
+            <SidebarDash/>
+           
+            <main>
                 <Outlet />
             </main>
-            <Footer />
         </div>
     );
 }

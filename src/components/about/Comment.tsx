@@ -15,14 +15,14 @@ const Comment = () => {
           });
       })
   return (
-    <section className='w-full md:h-[35rem] flexCenter  flex flex-col md:flex-row px-4 py-4 gap-10 md:py-20 md:padding-container'>
+    <section id="comment" className='w-full md:h-[35rem] flexCenter  flex flex-col md:flex-row px-4 py-4 gap-10  md:padding-container'>
         <div  className="c">
             <div data-aos="zoom-in" className={"w-[95%] flex flex-col flexCenter  gap-5 mt-5 md:mt-0"} >
-                        <div>
+                        <div className="flex flex-col flexCenter">
                             <h2 className="bold-18 md:bold-32">{comment.map((tit)=>(
                                 tit.title
                             ))}</h2>
-                            <span className="flex mt-2"><hr className="w-32 h-2 bg-rouge"/><hr className="w-32 h-2 bg-secondary-dark-bg"/></span>
+                            <span className="flex mt-2"><hr className="w-56 h-2 bg-rouge flex items-center"/><hr className="w-36 h-2 bg-secondary-dark-bg"/></span>
                         </div>
                
                    {

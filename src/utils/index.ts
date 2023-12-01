@@ -46,3 +46,11 @@ export const errorMessageHadler = (error: any) => {
         error.toString();
     return message
 }
+
+ // function to redict on top
+ export const scrollToTop=()=>{
+    window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+    })
+  }

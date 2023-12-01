@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { useEffect } from "react";
 import { aproposII} from "../../data";
-import objectif from '../../assets/femmev.jpeg'
+import objectif from '../../assets/dr.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -17,7 +17,7 @@ const AboutSectionII = () => {
       })
     
   return (
-    <section className='w-full md:h-[35rem] bg-main-bg flex flex-col flexCenter padding-container mb-10'>
+    <section id="nous" className='w-full md:h-[35rem] bg-main-bg flex flex-col flexCenter padding-container'>
         <div  className="flex flex-col md:flex-row flexCenter gap-10  mt-14 lg:mt-24">
             
             <div data-aos="fade-down-right" className={"w-[95%] md:w-[900px] md:p-6 flex flex-col gap-5 mt-5 md:mt-0"}>

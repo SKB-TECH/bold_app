@@ -1,6 +1,7 @@
 import { MdEmail, MdLocationOn,  MdFax } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
-import moment from "moment";
+
+
 
 export const links=[
   {
@@ -66,7 +67,20 @@ export const exoViolence=[
 export const namePages=[
     {
         title: "Apropos de Bold",
-        resume:["Qui sommes-nous ?","Qu'est-ce-que nous faisons ?", "Comment nous le faisons ?"]
+        resume:[
+          {
+            title:"Qui sommes-nous ?",
+            link:"#apropos"
+          },
+          {
+            title:"Qu'est-ce-que nous faisons ?",
+            link:"#nous"
+          },
+          {
+            title:"Comment nous le faisons ?",
+            link:"#comment"
+          }
+        ]
     }
     
 ]
@@ -430,194 +444,610 @@ export const cardsData = [
   };
   
   
-  //* calendar Events
-  let eventGuid = 0
-  let todayStr = moment().format("YYYY-MM-DD")  // YYYY-MM-DD of today
-  export const INITIAL_EVENTS = [
+ 
+ 
+  export const employeesData = [
     {
-      id: createEventId(),
-      title: 'Lunch Pary',
-      start: todayStr + 'T09:00:00',
+      EmployeeID: 1,
+      Name: 'Nancy Davolio',
+      Title: 'Sales Representative',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    },
+    {
+      EmployeeID: 2,
+      Name: 'Nasimiyu Danai',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 3,
+      Name: 'Iulia Albu',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Siegbert Gottfried',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Omar Darobe',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Penjani Inyene',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Miron Vitold',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 1,
+      Name: 'Nancy Davolio',
+      Title: 'Sales Representative',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
   
     },
     {
-      id: createEventId(),
-      title: 'Timed event',
-      start: moment(todayStr).add(1, "days").format("YYYY-MM-DD") + 'T16:00:00'
+      EmployeeID: 2,
+      Name: 'Nasimiyu Danai',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
     },
     {
-      id: createEventId(),
-      title: "Head Meetup",
-      start: moment(todayStr).add(2, "days").format("YYYY-MM-DD") + 'T20:00:00'
+      EmployeeID: 3,
+      Name: 'Iulia Albu',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
     },
     {
-      id: createEventId(),
-      title: "VC Meeting",
-      start: moment(todayStr).add(3, "days").format("YYYY-MM-DD") + 'T09:00:00'
+      EmployeeID: 4,
+      Name: 'Siegbert Gottfried',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
     },
     {
-      id: createEventId(),
-      title: "Payment Shedules",
-      start: moment(todayStr).add(5, "days").format("YYYY-MM-DD") + 'T13:00:00'
+      EmployeeID: 5,
+      Name: 'Omar Darobe',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
     },
     {
-      id: createEventId(),
-      title: "VC Meeting",
-      start: moment(todayStr).add(6, "days").format("YYYY-MM-DD") + 'T13:00:00'
+      EmployeeID: 4,
+      Name: 'Penjani Inyene',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
     },
-  ]
+    {
+      EmployeeID: 5,
+      Name: 'Miron Vitold',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 1,
+      Name: 'Nancy Davolio',
+      Title: 'Sales Representative',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 2,
+      Name: 'Nasimiyu Danai',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 3,
+      Name: 'Iulia Albu',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Siegbert Gottfried',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Omar Darobe',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+   
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Penjani Inyene',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Miron Vitold',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    },
+    {
+      EmployeeID: 1,
+      Name: 'Nancy Davolio',
+      Title: 'Sales Representative',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
   
-  export function createEventId() {
-    return String(eventGuid++)
-  }
+    },
+    {
+      EmployeeID: 2,
+      Name: 'Nasimiyu Danai',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 3,
+      Name: 'Iulia Albu',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Siegbert Gottfried',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+   
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Omar Darobe',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Penjani Inyene',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Miron Vitold',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    
+    },
+    {
+      EmployeeID: 1,
+      Name: 'Nancy Davolio',
+      Title: 'Sales Representative',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    
   
+    },
+    {
+      EmployeeID: 2,
+      Name: 'Nasimiyu Danai',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
   
-  // * tasks
-  export const boardData = {
-    columns: [
-      {
-        id: 1,
-        title: "Backlog",
-        cards: [
-          {
-            id: 1,
-            title: "Database Setup",
-            description: "Firebase Integration"
-          },
-          {
-            id: 2,
-            title: "Data Flow",
-            description: "Setup Diagram with other developers"
-          },
-        ]
-      },
-      {
-        id: 2,
-        title: "TODO",
-        cards: [
-          {
-            id: 9,
-            title: "Data Table Page",
-            description: "Server side Pagination",
-          }
-        ]
-      },
-      {
-        id: 3,
-        title: "Doing",
-        cards: [
-          {
-            id: 10,
-            title: "Full Calendar Extension",
-            description: "Make new events and store in global states"
-          },
-          {
-            id: 11,
-            title: "Custom Kanban Board",
-            description: "Setup react-kanban dep within Dashboard as seperate page"
-          }
-        ]
-      },
-      {
-        id: 4,
-        title: "Completed",
-        cards: [
-          {
-            id: 12,
-            title: "Vite Server Setup",
-            description: "Configure required modules and starters"
-          },
-          {
-            id: 13,
-            title: "Modular structre",
-            description: "Write css in form of modules to reduce the naming conflicts"
-          }
-        ]
-      }
-    ]
-  }
+    },
+    {
+      EmployeeID: 3,
+      Name: 'Iulia Albu',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Siegbert Gottfried',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Omar Darobe',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Penjani Inyene',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Miron Vitold',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    
+    },
+    {
+      EmployeeID: 1,
+      Name: 'Nancy Davolio',
+      Title: 'Sales Representative',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
   
+    },
+    {
+      EmployeeID: 2,
+      Name: 'Nasimiyu Danai',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 3,
+      Name: 'Iulia Albu',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Siegbert Gottfried',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Omar Darobe',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Penjani Inyene',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Miron Vitold',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+   
+    },
+    {
+      EmployeeID: 1,
+      Name: 'Nancy Davolio',
+      Title: 'Sales Representative',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
   
-  // * user table data
-  export const userData = [
-    {
-      name: {
-        firstName: 'John',
-        lastName: 'Doe',
-      },
-      address: '261 Erdman Ford',
-      city: 'East Daphne',
-      state: 'Kentucky',
     },
     {
-      name: {
-        firstName: 'Jane',
-        lastName: 'Doe',
-      },
-      address: '769 Dominic Grove',
-      city: 'Columbus',
-      state: 'Ohio',
+      EmployeeID: 2,
+      Name: 'Nasimiyu Danai',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
     },
     {
-      name: {
-        firstName: 'Joe',
-        lastName: 'Doe',
-      },
-      address: '566 Brakus Inlet',
-      city: 'South Linda',
-      state: 'West Virginia',
+      EmployeeID: 3,
+      Name: 'Iulia Albu',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
     },
     {
-      name: {
-        firstName: 'Kevin',
-        lastName: 'Vandy',
-      },
-      address: '722 Emie Stream',
-      city: 'Lincoln',
-      state: 'Nebraska',
+      EmployeeID: 4,
+      Name: 'Siegbert Gottfried',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
     },
     {
-      name: {
-        firstName: 'Joshua',
-        lastName: 'Rolluffs',
-      },
-      address: '32188 Larkin Turnpike',
-      city: 'Charleston',
-      state: 'South Carolina',
-    }, {
-      name: {
-        firstName: 'Jane',
-        lastName: 'Doe',
-      },
-      address: '769 Dominic Grove',
-      city: 'Columbus',
-      state: 'Ohio',
+      EmployeeID: 5,
+      Name: 'Omar Darobe',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
     },
     {
-      name: {
-        firstName: 'Joe',
-        lastName: 'Doe',
-      },
-      address: '566 Brakus Inlet',
-      city: 'South Linda',
-      state: 'West Virginia',
+      EmployeeID: 4,
+      Name: 'Penjani Inyene',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
     },
     {
-      name: {
-        firstName: 'Kevin',
-        lastName: 'Vandy',
-      },
-      address: '722 Emie Stream',
-      city: 'Lincoln',
-      state: 'Nebraska',
+      EmployeeID: 5,
+      Name: 'Miron Vitold',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
     },
     {
-      name: {
-        firstName: 'Joshua',
-        lastName: 'Rolluffs',
-      },
-      address: '32188 Larkin Turnpike',
-      city: 'Charleston',
-      state: 'South Carolina',
+      EmployeeID: 1,
+      Name: 'Nancy Davolio',
+      Title: 'Sales Representative',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+  
     },
-  ]
+    {
+      EmployeeID: 2,
+      Name: 'Nasimiyu Danai',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 3,
+      Name: 'Iulia Albu',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Siegbert Gottfried',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Omar Darobe',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Penjani Inyene',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Miron Vitold',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    
+    },
+    {
+      EmployeeID: 1,
+      Name: 'Nancy Davolio',
+      Title: 'Sales Representative',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+  
+    },
+    {
+      EmployeeID: 2,
+      Name: 'Nasimiyu Danai',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+     
+    },
+    {
+      EmployeeID: 3,
+      Name: 'Iulia Albu',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 4,
+      Name: 'Siegbert Gottfried',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Omar Darobe',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson'},
+      
+    {
+      EmployeeID: 4,
+      Name: 'Penjani Inyene',
+      Title: 'Marketing Head',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+    
+    },
+    {
+      EmployeeID: 5,
+      Name: 'Miron Vitold',
+      Title: 'HR',
+      HireDate: '01/02/2021',
+      Country: 'USA',
+      ReportsTo: 'Carson',
+      
+    },
+  ];
+
+  export const employeesGrid = [
+    { headerText: 'Employee',
+      width: '150',
+      textAlign: 'Center' },
+    { field: 'Name',
+      headerText: '',
+      width: '0',
+      textAlign: 'Center',
+    },
+    { field: 'Title',
+      headerText: 'Designation',
+      width: '170',
+      textAlign: 'Center',
+    },
+    { headerText: 'Country',
+      width: '120',
+      textAlign: 'Center',
+       },
+  
+    { field: 'HireDate',
+      headerText: 'Hire Date',
+      width: '135',
+      format: 'yMd',
+      textAlign: 'Center' },
+  
+    { field: 'ReportsTo',
+      headerText: 'Reports To',
+      width: '120',
+      textAlign: 'Center' },
+    { field: 'EmployeeID',
+      headerText: 'Employee ID',
+      width: '125',
+      textAlign: 'Center' },
+  ];

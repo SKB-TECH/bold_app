@@ -40,7 +40,7 @@ const rootApp = createBrowserRouter([
     },
     {
         path: '/',
-        element: <LayoutBlogue />,
+        element: <Layout />,
         children: [
             {
                 path: '/blogue',

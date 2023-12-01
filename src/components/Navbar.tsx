@@ -9,8 +9,8 @@ import type { MenuProps } from "antd";
 import { Dropdown,  } from "antd"
 import {AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { links } from "../data";
-import {Link, useNavigate} from 'react-router-dom'
-
+import{NavLink, useNavigate} from 'react-router-dom'
+import { scrollToTop } from "../utils";
 // fin items
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -32,6 +32,7 @@ const Navbar = () => {
   }, []);
 
 
+ 
   //@ts-ignore
   const menuItems: {
     map(arg0: (item: any, index: any) => import("react/jsx-runtime").JSX.Element): React.ReactNode; title: unknown; items: MenuProps["items"] 
@@ -83,18 +84,18 @@ const Navbar = () => {
       className={`capitalize fixed w-full h-[100px] z-10 bg-secondary-dark-bg top-0 left-0 right-0 ${isScroll && "z-[100]  bg-secondary-dark-bg border-b-2"
         }`}>
       <div className='flex justify-between items-center  w-full h-full padding-container'>
-          <Link to="/">
+          <NavLink to="/">
           <img src={logo} width={100} height={100} alt="logo" />
-        </Link>
+        </NavLink>
           {/* les routes  */}
           <div className="hidden md:flex justify-around ml-14">
             <ul className="flex flexCenter w-full list-none gap-10 padding-container  h-full">
                 {
                   links.map((item,index)=>(
                     <li className="text-gray-300 h-full justify-center">
-                      <Link key={index} to={`/${item.link}`} className={`hover:text-rouge-100  transform ease-in duration-300 ${window.location.pathname===`/${item.link}` && 'text-rouge-100'}`}>
+                      <NavLink onClick={scrollToTop} key={index} to={`/${item.link}`} className={`hover:text-rouge-100  transform ease-in duration-300 ${window.location.pathname===`/${item.link}` && 'text-rouge-100'}`}>
                         {item.title}
-                      </Link>
+                      </NavLink>
                       {
                         window.location.pathname===`/${item.link}` ? <hr className="bg-rouge mt-3" />: null
                       }
@@ -138,8 +139,8 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt='Picture of the author'
-                width={200}
-                height={200}
+                width={100}
+                height={100}
               />
             </div>
             <div
@@ -159,7 +160,7 @@ const Navbar = () => {
               {
                 links.map((item,index)=>(
                   <li className="text-gray-300 flex flex-col gap-3 hover:text-rouge-100 transform ease-in duration-300" onClick={handlClic}>
-                    <Link to={`/${item.link}`}>{item.title}</Link>
+                    <NavLink to={`/${item.link}`}>{item.title}</NavLink>
                     <hr className="bg-gray-300"/>
                   </li>
                 ))
