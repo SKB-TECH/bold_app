@@ -9,12 +9,12 @@ function LayoutDashboard() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (userConnected == null || userConnected == undefined)
+        if (userConnected === null || userConnected === undefined)
             navigate('/bold/login');
     }, [navigate, userConnected]);
 
     useEffect(() => {
-        if (userConnected == null || userConnected == undefined)
+        if (userConnected === null || userConnected === undefined)
             navigate('/bold/login');
     }, [navigate, userConnected])
 

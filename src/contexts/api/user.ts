@@ -1,8 +1,6 @@
-import axios from "axios";
 import { BASE_URL } from "../../utils/config";
-import { errorMessageHadler, toastOption } from "../../utils";
+import {toastOption } from "../../utils";
 import toast from "react-hot-toast";
-
 
 
 export const getAllStatus = async () => {

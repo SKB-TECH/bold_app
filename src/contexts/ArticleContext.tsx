@@ -19,11 +19,12 @@ export default function ArticleContextProvider({ children }: ArticleContextProvi
     // @ts-ignore
     const { setLoading } = useNavigationContext();
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const allPostedArticles = async () => {
         try {
             setLoading(true);
             const res = await axios.get(BASE_URL + '/article/published/all');
-            if (res.status == 200) {
+            if (res.status === 200) {
                 setArticles(res.data.data);
                 setLoading(false);
             }
@@ -35,7 +36,7 @@ export default function ArticleContextProvider({ children }: ArticleContextProvi
 
     useEffect(() => {
         allPostedArticles()
-    }, [])
+    }, [allPostedArticles])
 
     return (
         <ArticleContext.Provider value={{ articles }}>

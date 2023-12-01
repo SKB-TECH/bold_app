@@ -2,7 +2,6 @@ import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../components/layouts/Layout';
 import { Home, About, Contacts, Programme, Blogue, Don, Ready, Dashbord, Login } from '../pages';
 import Processus from '../pages/Processus';
-import LayoutBlogue from '../components/layouts/LayoutBlogue';
 import LayoutDashboard from '../components/layouts/LayoutDashboard';
 
 

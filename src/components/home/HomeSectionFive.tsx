@@ -1,20 +1,19 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import { resnews } from '../../data'
 import { Toaster } from 'react-hot-toast';
 import { subscribe } from '../../contexts/api/newsletter';
 import { errorMessageHadler } from '../../utils';
-import { NavigationContext } from '../../contexts/NavigationContext';
+
 
 const HomeSectionFive = () => {
   // @ts-ignore
-  // const { subscribeAction } = useContext(NewsletterContext);
-
 
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
 
   const subscribeAction = (data: any) => {
     try {
+      //@ts-ignore
       const res = subscribe(data);
     } catch (e) {
       errorMessageHadler(e)
