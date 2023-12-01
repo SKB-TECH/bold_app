@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 // import { useParams } from "react-router-dom";
 import logo from '../assets/logo.png';
-import femme from '../assets/filleBold.jpg';
-
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { useParams } from 'react-router-dom';
 import { useArticleContext } from '../contexts/ArticleContext';

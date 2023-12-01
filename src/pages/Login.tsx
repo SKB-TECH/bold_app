@@ -2,7 +2,6 @@ import logo from '../assets/logo.png';
 import { Form, Input } from 'antd'
 import { useUserContext } from '../contexts/UserContext';
 import { useEffect, useState } from 'react';
-import { removeLocalStorageItem } from '../utils';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -19,12 +18,12 @@ const Login = () => {
         useEffect(() => {
                 if (userConnected != null)
                         navigate("/bold/dashboard")
-        }, [])
+        }, [navigate, userConnected])
 
         useEffect(() => {
-                if (userConnected != null && userConnected != undefined)
+                if (userConnected != null && userConnected !== undefined)
                         navigate("/bold/dashboard")
-        }, [userConnected])
+        }, [navigate, userConnected])
 
         return (
                 <section className="flex flex-col flexCenter items-cent h-screen w-full">
