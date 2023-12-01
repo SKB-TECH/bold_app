@@ -1,9 +1,8 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import { resnews } from '../../data'
 import { Toaster } from 'react-hot-toast';
 import { subscribe } from '../../contexts/api/newsletter';
 import { errorMessageHadler } from '../../utils';
-import { NavigationContext } from '../../contexts/NavigationContext';
 
 const HomeSectionFive = () => {
   // @ts-ignore
@@ -15,7 +14,7 @@ const HomeSectionFive = () => {
 
   const subscribeAction = (data: any) => {
     try {
-      const res = subscribe(data);
+      subscribe(data);
     } catch (e) {
       errorMessageHadler(e)
     }

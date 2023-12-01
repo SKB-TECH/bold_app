@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@ant-design/icons': ^5.2.6
   '@babel/core': ^7.23.3
   '@babel/preset-env': ^7.23.3
   '@babel/preset-react': ^7.23.3
@@ -58,6 +59,7 @@ specifiers:
   zustand: ^4.3.3
 
 dependencies:
+  '@ant-design/icons': 5.2.6_biqbaboplfbrettd7655fr4n2y
   '@babel/core': 7.23.3
   '@babel/preset-env': 7.23.3_@babel+core@7.23.3
   '@babel/preset-react': 7.23.3_@babel+core@7.23.3
