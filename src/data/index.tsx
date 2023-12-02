@@ -79,6 +79,10 @@ export const namePages=[
           {
             title:"Comment nous le faisons ?",
             link:"#comment"
+          },
+          {
+            title:"Nos valeurs",
+            link:"#valeur"
           }
         ]
     }

@@ -2,9 +2,9 @@ export const FOOTER_LINKS = [
     {
       title: 'Bold',
       links: [
+        'apropos',
         'programme',
         'blogue',
-        'apropos',
       ],
     },
     {
@@ -12,7 +12,7 @@ export const FOOTER_LINKS = [
         links: [
           'don',
           'contact',
-          'don'
+          ''
         ],
       }
   ];
@@ -21,7 +21,7 @@ export const FOOTER_LINKS = [
     title: 'Contact Us',
     links: [
       { label: 'Admin Officer', value: '+243 974 970 837' },
-      { label: 'Email Officer', value: 'boldInfo@gmail.com' },
+      { label: 'Email Officer', value: 'bold@Info.com' },
     ],
   };
   

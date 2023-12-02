@@ -4,7 +4,7 @@ import { valeurs } from "../../data"
 
 const Principes = () => {
   return (
-    <section id="principe" className="w-full md:h-[25rem]  px-4  gap-10 md:py-20 padding-container">
+    <section id="valeur" className="w-full md:h-[25rem]  px-4  gap-10 md:py-20 padding-container">
       <div className="flex flex-col  flexCenter gap-10 flexCenter  w-full bg-main-bg h-full border padding-container">
       <div>
                             <h2 className="bold-18 md:bold-32">{valeurs.map((tit)=>(

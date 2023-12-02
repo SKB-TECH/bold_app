@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { useEffect } from "react";
 import { programme2} from "../../data";
-import objectif from '../../assets/femmev.jpeg'
+import objectif from '../../assets/femmesdisc.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -41,7 +41,7 @@ const ProgrammeII = () => {
                   
             </div>
             <div className="rounded-lg h-full shadow-md" data-aos="fade-down-left"> 
-                        <img src={objectif} alt="picture" width={500} height={200} className="rounded-lg h-full bg-cover"/>
+                        <img src={objectif} alt="picture" width={800} height={200} className="rounded-lg h-full bg-cover"/>
             </div>
         </div>
         <hr className="h-2 w-full bg-gray-30 mt-5"/>
