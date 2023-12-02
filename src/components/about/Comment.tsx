@@ -22,7 +22,7 @@ const Comment = () => {
                             <h2 className="bold-18 md:bold-32">{comment.map((tit)=>(
                                 tit.title
                             ))}</h2>
-                            <span className="flex mt-2"><hr className="w-56 h-2 bg-rouge flex items-center"/><hr className="w-36 h-2 bg-secondary-dark-bg"/></span>
+                            <span className="flex mt-2"><hr className=" w-24 md:w-56 h-2 bg-rouge flex items-center"/><hr className="w-36 h-2 bg-secondary-dark-bg"/></span>
                         </div>
                
                    {
