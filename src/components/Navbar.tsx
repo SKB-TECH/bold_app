@@ -9,8 +9,7 @@ import type { MenuProps } from "antd";
 import { Dropdown, } from "antd"
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { links } from "../data";
-import { scrollToTop } from "../utils";
-import { Link, useNavigate, NavLink} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAppContext } from "../contexts/AppContext";
 import { text } from "../utils";
 
@@ -168,22 +167,6 @@ const Navbar = () => {
             <p className='w-[85%] md:w-[90%] py-4 mx-auto text-gray-30'>
               Que voulez-vous faire ?
             </p>
-<<<<<<< HEAD
-          </div>
-          <div className='flex flex-col justify-start gap-10 cursor-pointer'>
-          <div className="sm:hidden flex  flex-col justify-around ">
-          <ul className="flex flex-col justify-around list-none gap-12">
-              {
-                links.map((item,index)=>(
-                  <li className="text-gray-300 flex flex-col gap-3 hover:text-rouge-100 transform ease-in duration-300" onClick={handlClic}>
-                    <NavLink to={`/${item.link}`}>{item.title}</NavLink>
-                    <hr className="bg-gray-300"/>
-                  </li>
-                ))
-              }
-          </ul>
-        </div>
-
           </div> */}
           <div className='flex flex-col justify-start gap-10 cursor-pointer mt-4'>
             <div className="sm:hidden flex  flex-col justify-around ">

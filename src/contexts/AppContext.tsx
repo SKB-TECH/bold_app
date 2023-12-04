@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import NavigationContextProvider from './NavigationContext';
 import NewsletterContextProvider from './NewlettersContext';
 import UserContextPRovider from './UserContext';
@@ -6,7 +6,6 @@ import ArticleContextProvider from './ArticleContext';
 import { IntlProvider, RawIntlProvider, createIntl, createIntlCache } from 'react-intl'
 import siteMessageFr from "../data/locales/fr.json"
 import siteMessageEn from "../data/locales/en.json"
-import DonContextProvider from './DonContext';
 
 
 interface AppContextValue {
@@ -24,6 +23,7 @@ const AppContext = createContext<AppContextValue | undefined>(undefined);
 
 function AppContexProvider({ children }: any) {
     const [currentPath, setCurrentPath] = React.useState("");
+
     // ** States
     const [locale, setLocale] = useState('fr')
     const [messages, setMessages] = useState(allMessage['fr'])
@@ -40,24 +40,34 @@ function AppContexProvider({ children }: any) {
     const switchLanguage = (lang: any) => {
         setLocale(lang)
         // @ts-ignore
-            return (
-                <NavigationContextProvider>
-                <UserContextPRovider >
-                 <DonContextProvider>
-                    <NewsletterContextProvider >
-                    <ArticleContextProvider>
-                    
-                        <AppContext.Provider value={{ currentPath, setCurrentPath,switchLanguage,locale }}>
-                            {children}
-                        </AppContext.Provider>
-                    </ArticleContextProvider>
+        setMessages(allMessage[lang])
+        localStorage.setItem('lang', lang)
+    }
+
+    useEffect(() => {
+        const lang = localStorage.getItem("lang")
+        if (lang) {
+            setLocale(lang)
+            // @ts-ignore
+            setMessages(allMessage[lang])
+        }
+    }, [])
+
+    return (
+        <RawIntlProvider value={intl} >
+            <NavigationContextProvider>
+                <UserContextPRovider>
+                    <NewsletterContextProvider>
+                        <ArticleContextProvider>
+                            <AppContext.Provider value={{ currentPath, setCurrentPath, switchLanguage, locale }}>
+                                {children}
+                            </AppContext.Provider>
+                        </ArticleContextProvider>
                     </NewsletterContextProvider>
-                    </DonContextProvider>
-                </UserContextPRovider>      
+                </UserContextPRovider>
             </NavigationContextProvider>
-            )
-       
-}
+        </RawIntlProvider>
+    )
 }
 export default AppContexProvider;
 
@@ -69,3 +79,4 @@ export function useAppContext() {
     }
     return context;
 }
+
