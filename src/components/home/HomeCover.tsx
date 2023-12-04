@@ -11,12 +11,14 @@ const HomeCover = () => {
         <div className='bg-gradient-to-r from-black padding-container  min-h-full flex flex-col justify-center gap-10'>
           {
             bannier.map((item, index) => (
-              <>
+              <div key={index}>
                 <h2 className=' bold-20 md:bold-40 text-white'>
                   {text('bannierTitle')}
                 </h2>
-                <p className='text-white md:w-[600px]   bold-20 md:bold-40'>{item.resume}</p>
-              </>
+                <p className='text-white md:w-[600px]   bold-20 md:bold-40'>
+                  {text('bannier')}
+                </p>
+              </div>
             ))
           }
           <Button type='button' texte={text("cta")} couleur='rouge' taille={44} />
