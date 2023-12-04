@@ -1,3 +1,5 @@
+import { FormattedMessage } from "react-intl";
+
 export const saveToken = (userData: any) => {
     if (!localStorage.getItem('user')) {
         localStorage.setItem('user', JSON.stringify(userData));
@@ -45,4 +47,8 @@ export const errorMessageHadler = (error: any) => {
         error.message.toString() ||
         error.toString();
     return message
+}
+
+export const text = (id: string) => {
+    return <FormattedMessage id={id} />
 }
