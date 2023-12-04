@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { resnews } from '../../data'
 import { Toaster } from 'react-hot-toast';
 import { subscribe } from '../../contexts/api/newsletter';
-import { errorMessageHadler } from '../../utils';
+import { errorMessageHadler, text } from '../../utils';
 
 const HomeSectionFive = () => {
   // @ts-ignore
@@ -26,8 +26,8 @@ const HomeSectionFive = () => {
         {
           resnews.map((items, index) => (
             <div className='flex flex-col gap-5 ' key={index}>
-              <h2 className='bold-18 text-white md:bold-32'>{items.title}</h2>
-              <p className='regular-16 text-white'>{items.resume}</p>
+              <h2 className='bold-18 text-white md:bold-32'>{text("resnewsTitle")}</h2>
+              <p className='regular-16 text-white'>{text("resnewsResume")}</p>
             </div>
           ))
         }
@@ -39,7 +39,7 @@ const HomeSectionFive = () => {
           onClick={() => subscribeAction({ name, mail })}
           className='outline-none w-[99%]  md:w-[93%] h-10 border border-gray-400  rounded-md bg-rouge text-white bold-18'
         >
-          S'Inscrire
+          {text("btnInscrire")}
         </button>
       </div>
       <Toaster />

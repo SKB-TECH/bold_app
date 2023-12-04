@@ -2,6 +2,8 @@
 import { Button } from "..";
 import { exoViolence } from "../../data";
 import femme from '../../assets/femmev.jpeg';
+import { text } from "../../utils";
+
 const HomeSectionIII = () => {
   return (
     <section className='w-full h-screen  bg-main-bg flex flex-col flexCenter md:padding-container'>
@@ -11,21 +13,21 @@ const HomeSectionIII = () => {
             </div>
             <div className={"w-[95%] md:w-[1/2] md:p-6 flex flex-col gap-5"} >
               <h2 className="bold-18 md:bold-20">{exoViolence.map((titles)=>(
-                <span>{titles.title}</span>
+                <span>{text("exoViolenceTitle")}</span>
               ))}</h2>
                    {
                     exoViolence.map((item)=>(
                     
-                        item.resume.map((itms)=>(
+                        item.resume.map((itms,index)=>(
                           <p className="regular-16 text-justify">
                             {
-                              itms.par1
+                              text(`exoViolenceResume${index+1}`)
                             }
                           </p>
                         ))
                     ))
                    }
-                   <Button texte="Lire Plus" couleur="rouge" taille={52}/>
+                   <Button texte={text("ctaMore")} couleur="rouge" taille={52}/>
             </div>
             
         </div>

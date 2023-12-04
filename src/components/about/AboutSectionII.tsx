@@ -4,6 +4,7 @@ import { aproposII} from "../../data";
 import objectif from '../../assets/femmev.jpeg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { text } from "../../utils";
 
 
 const AboutSectionII = () => {
@@ -23,16 +24,16 @@ const AboutSectionII = () => {
             <div data-aos="fade-down-right" className={"w-[95%] md:w-[900px] md:p-6 flex flex-col gap-5 mt-5 md:mt-0"}>
                <div>
                <h2 className="bold-18 md:bold-32">{aproposII.map((tit)=>(
-                    tit.title
+                   text("apropos2Title")
                 ))}</h2>
                 <span className="flex mt-2"><hr className="w-32 h-2 bg-secondary-dark-bg"/><hr className="w-32 h-2 bg-rouge"/></span>
                </div>
                    {
                     aproposII.map((item)=>(
-                        item.resume.map((par)=>(
+                        item.resume.map((par,index)=>(
                             <p className="regular-14 md:regular-16 3xl:regular-32 text-justify">
                                 {
-                                    par.paragraphe
+                                    text(`apropos2Resume${index + 1}`)
                                 }
                             </p>
                         ))
