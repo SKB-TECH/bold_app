@@ -3,7 +3,7 @@ import NavigationContextProvider from './NavigationContext';
 import NewsletterContextProvider from './NewlettersContext';
 import UserContextPRovider from './UserContext';
 import ArticleContextProvider from './ArticleContext';
-
+import DonContextProvider from './DonContext';
 interface AppContextValue {
     currentPath: string;
     setCurrentPath: (path: string) => void
@@ -16,7 +16,9 @@ function AppContexProvider({ children }: any) {
     return (
         // @ts-ignore
         <NavigationContextProvider>
-            <UserContextPRovider>
+           
+           <UserContextPRovider>
+           <DonContextProvider>
                 <NewsletterContextProvider>
                     <ArticleContextProvider>
                         <AppContext.Provider value={{ currentPath, setCurrentPath }}>
@@ -24,7 +26,8 @@ function AppContexProvider({ children }: any) {
                         </AppContext.Provider>
                     </ArticleContextProvider>
                 </NewsletterContextProvider>
-            </UserContextPRovider>
+                </DonContextProvider>
+            </UserContextPRovider>      
         </NavigationContextProvider>
     )
 }

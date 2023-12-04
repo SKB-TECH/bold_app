@@ -1,34 +1,41 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-//@ts-nocheck
 import React, { useEffect } from 'react';
 import { useState, createContext } from 'react';
 import { errorMessageHadler } from '../utils';
 import axios from 'axios';
 import { BASE_URL } from '../utils/config';
 import { useNavigationContext } from './NavigationContext';
+import { useUserContext } from './UserContext';
+
 
 type ArticleContextValue = {
-    articles: any[];
+    don: any[];
 }
 type ArticleContextProviderProps = {
     children: React.ReactNode;
 }
 
-export const ArticleContext = createContext<ArticleContextValue | null>(null);
+export const DonContext = createContext<ArticleContextValue | null>(null);
 
-export default function ArticleContextProvider({ children }: ArticleContextProviderProps) {
-    const [articles, setArticles] = useState([]);
+export default function DonContextProvider({ children }: ArticleContextProviderProps) {
+    const [don, setDon] = useState([]);
     // @ts-ignore
     const { setLoading } = useNavigationContext();
-
+    //@ts-ignore
+    const {token}=useUserContext();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const allPostedArticles = async () => {
+    const allDon = async () => {
         try {
             setLoading(true);
-            const res = await axios.get(BASE_URL + '/article/published/all');
-            if (res.status === 200) {
-                setArticles(res.data.data);
+            const res = await axios.get(BASE_URL+'/don/all',{
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    Authorization: `Bearer ${token}`
+                },})
+            if (res.status === 100) {
+                setDon(res?.data?.data);
                 setLoading(false);
             }
         } catch (error) {
@@ -39,23 +46,22 @@ export default function ArticleContextProvider({ children }: ArticleContextProvi
 
     useEffect(() => {
         let send=true;
-        allPostedArticles()
+        allDon()
         return ()=>{
             send=false;
         }
     },[])
 
     return (
-        <ArticleContext.Provider value={{ articles }}>
+        <DonContext.Provider value={{ don }}>
             {children}
-        </ArticleContext.Provider>
+        </DonContext.Provider>
     )
 }
 
 
-export function useArticleContext() {
-    const context = React.useContext(ArticleContext);
-
+export function useADonContext() {
+    const context = React.useContext(DonContext);
     if (context === undefined) {
         throw new Error("useUserNavigation must be used within a UserContextProvider")
     }

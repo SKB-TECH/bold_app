@@ -38,3 +38,5 @@ export {default as Article} from './blogue/Article';
 export {default as CardBlog} from './elements/CardBlog';
 export {default as LayoutDash} from './dashbord/Layout/LayoutDash';
 export {default as User} from './dashbord/User';
+export {default as Views} from './elements/Views';
+export {default as ArticleView} from './elements/ArtcileView'
