@@ -6,8 +6,6 @@ import { errorMessageHadler, text } from '../../utils';
 
 const HomeSectionFive = () => {
   // @ts-ignore
-  // const { subscribeAction } = useContext(NewsletterContext);
-
 
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");

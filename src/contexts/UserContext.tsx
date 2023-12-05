@@ -1,10 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+//@ts-nocheck
+
 import React, { useEffect } from 'react';
 import { useState, createContext } from 'react';
 import toast from 'react-hot-toast';
-import { getAllUsers, login, recoveryPwdToken, updateUser, valideAccount } from './api/user';
+import { getAllUsers, recoveryPwdToken, updateUser, valideAccount } from './api/user';
 import { errorMessageHadler, getLocalStorageItem, removeLocalStorageItem, saveToLocalStorage, toastOption } from '../utils';
 import axios from 'axios';
 import { BASE_URL } from '../utils/config';
+
 
 type UserContextValue = {
     userConnected: any;
@@ -29,11 +33,11 @@ export default function UserContextPRovider({ children }: UserContextProviderPro
     const handleLogin = async (inputs: any, navigate: any) => {
         try {
             const res = await toast.promise(axios.post(BASE_URL + '/login', inputs), toastOption)
-            if (res.status == 200) {
-                setUserConnected(res.data.data.user);
-                setToken(res.data.data.token);
-                saveToLocalStorage(res.data.data.user, "user");
-                saveToLocalStorage(res.data.data.token, "token");
+            if (res.status === 200) {
+                setUserConnected(res.data?.data.user);
+                setToken(res.data?.data?.token);
+                saveToLocalStorage(res.data?.data.user, "user");
+                saveToLocalStorage(res.data?.data.token, "token");
                 navigate("/bold/dashboard");
             }
         } catch (error) {
@@ -44,17 +48,18 @@ export default function UserContextPRovider({ children }: UserContextProviderPro
     const allUsers = async (token: string) => {
         try {
             const usersData = await getAllUsers(token);
-            if (usersData.status === 200)
-                setUsers(usersData.data);
+            if (usersData.statusCode === '100')
+                setUsers(usersData?.data);
         } catch (error) {
             errorMessageHadler(error)
         }
     }
 
+    //@ts-ignore
     const activeUser = async (id: string, state: boolean, token: string) => {
         try {
             const res = await toast.promise(valideAccount(id, state, token), toastOption);
-            if (res.status == 200) {
+            if (res.status === 200) {
                 allUsers(token);
             }
         } catch (e) {
@@ -65,7 +70,7 @@ export default function UserContextPRovider({ children }: UserContextProviderPro
     const updateProfil = async (newUserData: any, token: string) => {
         try {
             const res = await toast.promise(updateUser(newUserData, token), toastOption);
-            if (res.status == 200) {
+            if (res.status === 200) {
                 allUsers(token);
             }
         } catch (e) {
@@ -77,7 +82,7 @@ export default function UserContextPRovider({ children }: UserContextProviderPro
     const forgetPwd = async (newUserData: string, token: string) => {
         try {
             const res = await toast.promise(recoveryPwdToken(newUserData, token), toastOption);
-            if (res.status == 200) {
+            if (res.status === 200) {
                 allUsers(token);
             } else {
                 toast.error(res.message);

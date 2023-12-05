@@ -6,10 +6,11 @@ specifiers:
   '@babel/preset-env': ^7.23.3
   '@babel/preset-react': ^7.23.3
   '@babel/preset-typescript': ^7.23.3
-  '@emotion/react': ^11.10.6
-  '@emotion/styled': ^11.10.6
+  '@emotion/react': ^11.11.1
+  '@emotion/styled': ^11.11.0
   '@mui/icons-material': ^5.11.9
-  '@mui/material': ^5.11.10
+  '@mui/material': ^5.14.19
+  '@mui/x-data-grid': ^6.18.3
   '@testing-library/jest-dom': ^5.17.0
   '@testing-library/react': ^13.4.0
   '@testing-library/user-event': ^13.5.0
@@ -70,6 +71,7 @@ dependencies:
   '@emotion/styled': 11.11.0_yaut5gnlglaudc27kvoruyzffy
   '@mui/icons-material': 5.14.19_onr35d73mnftxehy6xndbizrla
   '@mui/material': 5.14.19_fxcnftf4cuvyzzexiq3izoq4ou
+  '@mui/x-data-grid': 6.18.3_27nsslvmesewz7tlb6ivdzbiqy
   '@testing-library/jest-dom': 5.17.0
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/user-event': 13.5.0
@@ -2560,6 +2562,27 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-is: 18.2.0
+    dev: false
+
+  /@mui/x-data-grid/6.18.3_27nsslvmesewz7tlb6ivdzbiqy:
+    resolution: {integrity: sha512-0XTLW6e7cB3QBQKoAgdZN2M4WKxbmy0pJHRA9RrSUn91nInqZgwtxpI5fi7aTpX9vffRaUfKi7epr/zNyvxPOQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      '@mui/material': ^5.4.1
+      '@mui/system': ^5.4.1
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
+    dependencies:
+      '@babel/runtime': 7.23.4
+      '@mui/material': 5.14.19_fxcnftf4cuvyzzexiq3izoq4ou
+      '@mui/utils': 5.14.19_vefaa57jiikjg7ztnhkaom6nr4
+      clsx: 2.0.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      reselect: 4.1.8
+    transitivePeerDependencies:
+      - '@types/react'
     dev: false
 
   /@nicolo-ribaudo/eslint-scope-5-internals/5.1.1-v1:
@@ -10650,6 +10673,10 @@ packages:
 
   /requires-port/1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
+
+  /reselect/4.1.8:
+    resolution: {integrity: sha512-ab9EmR80F/zQTMNeneUr4cv+jSwPJgIlvEmVwLerwrWVbpLlBuls9XHzIeTFy4cegU2NHBp3va0LKOzU5qFEYQ==}
+    dev: false
 
   /resize-observer-polyfill/1.5.1:
     resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}

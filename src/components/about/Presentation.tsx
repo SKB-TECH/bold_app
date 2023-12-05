@@ -6,7 +6,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { text } from "../../utils";
 
-
 const Presentation = () => {
 
     useEffect(() => {
@@ -17,6 +16,7 @@ const Presentation = () => {
             delay: 100,
         });
     })
+    
     return (
         <section className='w-full md:h-[35rem] bg-main-bg flex flex-col flexCenter padding-container mb-10'>
             <div className="flex flex-col md:flex-row flexCenter gap-10  mt-14 lg:mt-24">

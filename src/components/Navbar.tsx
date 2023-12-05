@@ -42,6 +42,7 @@ const Navbar = () => {
   }, []);
 
 
+ 
   //@ts-ignore
   const menuItems: {
     map(arg0: (item: any, index: any) => import("react/jsx-runtime").JSX.Element): React.ReactNode; title: unknown; items: MenuProps["items"]
@@ -152,8 +153,8 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt='Picture of the author'
-                width={200}
-                height={200}
+                width={100}
+                height={100}
               />
             </div>
             <div

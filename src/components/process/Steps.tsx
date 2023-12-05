@@ -1,13 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
-import { message, Steps, DatePicker, Input, AutoComplete, Form} from 'antd';
+import { Steps, DatePicker, Input, AutoComplete, Form} from 'antd';
 import { statut, dontype} from '../../data';
-import {useNavigate} from 'react-router-dom';
 import { soutien } from '../../contexts/api/newsletter';
 import { errorMessageHadler } from '../../utils';
 
 const App: React.FC = () => {
 
-  const router = useNavigate();
   const [current, setCurrent] = useState(0);
 
   const [donInput, setDonInput] = useState({
@@ -26,10 +25,10 @@ const App: React.FC = () => {
   const validIdentite = () => {
     let result = true;
 
-    if (donInput.categorie == "") result = false
-    if (donInput.name == "") result = false
-    if (donInput.email == "") result = false
-    if (donInput.profession == "") result = false
+    if (donInput.categorie === "") result = false
+    if (donInput.name === "") result = false
+    if (donInput.email === "") result = false
+    if (donInput.profession === "") result = false
 
     return result;
   }
@@ -37,8 +36,8 @@ const App: React.FC = () => {
   const validAdresse = () => {
     let result = true;
 
-    if (donInput.pays == "") result = false
-    if (donInput.adresse == "") result = false
+    if (donInput.pays === "") result = false
+    if (donInput.adresse === "") result = false
 
     return result;
   }
@@ -46,9 +45,9 @@ const App: React.FC = () => {
   const validSoutien = () => {
     let result = true;
 
-    if (donInput.type == "") result = false
-    if (donInput.nature == "") result = false
-    if (donInput.date == "") result = false
+    if (donInput.type === "") result = false
+    if (donInput.nature === "") result = false
+    if (donInput.date === "") result = false
 
     return result;
   }
@@ -56,9 +55,9 @@ const App: React.FC = () => {
   const valid = () => {
     let result = true;
 
-    if (current == 0) result = validIdentite();
-    if (current == 1) result = validAdresse();
-    if (current == 2) result = validSoutien();
+    if (current === 0) result = validIdentite();
+    if (current === 1) result = validAdresse();
+    if (current === 2) result = validSoutien();
 
     return result;
   }
@@ -74,6 +73,7 @@ const App: React.FC = () => {
 
   const soutienAction = (data: any) => {
     try {
+      //@ts-ignore
       const res = soutien(data);
     } catch (e) {
       errorMessageHadler(e)

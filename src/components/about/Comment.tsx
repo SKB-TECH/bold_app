@@ -32,16 +32,16 @@ const Comment = () => {
                                     <Timeline items={it.resume} style={{ fontSize: '18px' }} className="md:flexCenter md:gap-5  regular-14 md:regular-16 3xl:regular-32" />
                                 </>
                             ))
-
-
-                        ))
-                    }
-
-                </div>
-
+                        
+                     
+                    ))
+                   }
+                   
             </div>
-        </section>
-    )
+            
+        </div>
+    </section>
+  )
 }
 
 export default Comment

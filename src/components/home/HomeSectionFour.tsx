@@ -17,7 +17,6 @@ const HomeSectionFour = () => {
             </div>
             <div className='flex flexCenter flex-col gap-20 w-full h-full md:flex-row'>
                 <Swiper
-                
                 breakpoints={
                   {
                     340:{
@@ -38,7 +37,7 @@ const HomeSectionFour = () => {
                 }}
                 autoplay={{
                   delay: 3000,
-                  disableOnInteraction: true,
+                  disableOnInteraction: false,
                 }}
     
                 

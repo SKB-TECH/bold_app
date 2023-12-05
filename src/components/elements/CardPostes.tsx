@@ -19,9 +19,9 @@ const CardPostes = () => {
   })
 
   return (
-    <div data-aos="flip-right" className='w-[400px] md:w-[550px] h-96 md:h-[400px] bg-white rounded-lg drop-shadow-sm border hover:shadow-lg'>
-        <div className="h-[48%] bg-rouge">
-            <img src={photo} className="object-cover h-full w-full" alt="image"/>
+    <div data-aos="flip-right" className='w-[400px] md:w-[550px] h-96 p-2 md:h-[400px] bg-white rounded-lg drop-shadow-sm border hover:shadow-lg'>
+        <div className="h-[50%]">
+            <img src={photo} className="object-cover h-full w-full rounded-lg" alt="image"/>
         </div>
         <div className="flex flex-col p-3 gap-2">
             <h2 className="bold-20 ">Debut Campagne en RDC Pour les elections de 2023</h2>

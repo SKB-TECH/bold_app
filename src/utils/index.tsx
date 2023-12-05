@@ -52,3 +52,12 @@ export const errorMessageHadler = (error: any) => {
 export const text = (id: string) => {
     return <FormattedMessage id={id} />
 }
+
+
+ // function to redict on top
+ export const scrollToTop=()=>{
+    window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+    })
+  }

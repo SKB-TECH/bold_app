@@ -4,14 +4,14 @@ import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '../constants';
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin, CiFacebook  } from "react-icons/ci";
-import { text } from '../utils';
+import { scrollToTop, text } from '../utils';
 
 const Footer = () => (
-  <footer className="padding-container flexCenter md:h-[24rem] bg-secondary-dark-bg text-gray-300">
+  <footer className="padding-container flexCenter md:h-[24rem] bg-secondary-dark-bg text-gray-300 p-6">
     <div className=" max-container flex w-full flex-col gap-14">
-      <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
+      <div className="flex flex-col items-start justify-center gap-10 md:flex-row">
         <Link to="/">
-          <img src={log} width={120} height={100} alt="logo" />
+          <img src={log} width={120} height={100} alt="logo" className='-ml-3 md:-ml-0'/>
         </Link>
         <div className="flex flex-row flex-wrap gap-10 sm:justify-around md:flex-1">
           {
@@ -23,7 +23,7 @@ const Footer = () => (
                     <div  className='flex flex-col'>
                         {
                           items.links.map((item)=>(
-                            <Link to={`/${item}`} className='capitalize mt-2 whitespace-nowrap hover:text-rouge-100 hover:underline-offset-1 transition-all ease-in duration-300'>{text(item)}</Link>
+                            <Link to={`/${item}`} className='capitalize mt-2 whitespace-nowrap hover:text-rouge-100 hover:underline-offset-1 transition-all ease-in duration-300'>{item}</Link>
                           ))
                         }
                     </div>

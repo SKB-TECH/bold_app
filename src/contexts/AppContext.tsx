@@ -23,6 +23,7 @@ const AppContext = createContext<AppContextValue | undefined>(undefined);
 
 function AppContexProvider({ children }: any) {
     const [currentPath, setCurrentPath] = React.useState("");
+
     // ** States
     const [locale, setLocale] = useState('fr')
     const [messages, setMessages] = useState(allMessage['fr'])
@@ -68,7 +69,6 @@ function AppContexProvider({ children }: any) {
         </RawIntlProvider>
     )
 }
-
 export default AppContexProvider;
 
 export function useAppContext() {

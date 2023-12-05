@@ -1,4 +1,5 @@
 import React from 'react'
+import { text } from '../../utils'
 
 const ProgrammeCover = () => {
   return (
@@ -19,7 +20,7 @@ const ProgrammeCover = () => {
 
                     ))} */}
                     
-                    <h2 className= ' bold-20 md:bold-40 text-white'>Nos Programmes</h2>
+          <h2 className=' bold-20 md:bold-40 text-white'>{ text("program")}</h2>
          </div>
          
       </div>
