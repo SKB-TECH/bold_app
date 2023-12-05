@@ -4,7 +4,6 @@ import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '../constants';
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin, CiFacebook  } from "react-icons/ci";
-import { scrollToTop, text } from '../utils';
 
 const Footer = () => (
   <footer className="padding-container flexCenter md:h-[24rem] bg-secondary-dark-bg text-gray-300 p-6">

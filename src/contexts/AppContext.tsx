@@ -3,7 +3,7 @@ import NavigationContextProvider from './NavigationContext';
 import NewsletterContextProvider from './NewlettersContext';
 import UserContextPRovider from './UserContext';
 import ArticleContextProvider from './ArticleContext';
-import { IntlProvider, RawIntlProvider, createIntl, createIntlCache } from 'react-intl'
+import {  RawIntlProvider, createIntl, createIntlCache } from 'react-intl'
 import siteMessageFr from "../data/locales/fr.json"
 import siteMessageEn from "../data/locales/en.json"
 
