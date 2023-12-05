@@ -1,6 +1,6 @@
 interface model_btn{
     types?: string;
-    texte: string;
+    texte: any;
     couleur?: string;
     type?:"button" | "submit" | "reset";
     functions?:any,

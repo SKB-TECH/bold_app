@@ -1,3 +1,5 @@
+import{GridColDef} from '@mui/x-data-grid';
+
 export const FOOTER_LINKS = [
     {
       title: 'Bold',
@@ -35,3 +37,24 @@ export const FOOTER_LINKS = [
       '../data/wordpress.svg',
     ],
   };
+
+//columns users view
+export const columnsnUser:GridColDef[]=[
+  {
+    field:'noms',
+    headerName:'Noms',
+    width: 350,
+  },
+  {
+    field:'email',
+    headerName:'Email',
+    width: 350
+  },
+  {
+    field:'fonction',
+    headerName:'Fonction',
+    width: 250
+  },
+]
+
+export const colors= ['#E5FAFB','rgb(254, 201, 15)','rgb(255, 244, 229)','rgb(235, 250, 242)'];

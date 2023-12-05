@@ -4,7 +4,6 @@ import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '../constants';
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin, CiFacebook  } from "react-icons/ci";
-import { scrollToTop } from '../utils';
 
 const Footer = () => (
   <footer className="padding-container flexCenter md:h-[24rem] bg-secondary-dark-bg text-gray-300 p-6">
@@ -17,11 +16,13 @@ const Footer = () => (
           {
               FOOTER_LINKS?.map((items,index) => (
                 <div key={index} className="flex flex-col gap-5">
-                   <h4 className='bold-18 whitespace-nowrap'>{items.title}</h4>
+                  <h4 className='bold-18 whitespace-nowrap'>
+                    
+                   </h4>
                     <div  className='flex flex-col'>
                         {
                           items.links.map((item)=>(
-                            <Link to={`/${item}`} className='capitalize mt-2 whitespace-nowrap hover:text-rouge-100 hover:underline-offset-1 transition-all ease-in duration-300' onClick={scrollToTop}>{item}</Link>
+                            <Link to={`/${item}`} className='capitalize mt-2 whitespace-nowrap hover:text-rouge-100 hover:underline-offset-1 transition-all ease-in duration-300'>{item}</Link>
                           ))
                         }
                     </div>
