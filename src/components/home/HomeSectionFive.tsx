@@ -4,7 +4,6 @@ import { Toaster } from 'react-hot-toast';
 import { subscribe } from '../../contexts/api/newsletter';
 import { errorMessageHadler } from '../../utils';
 
-
 const HomeSectionFive = () => {
   // @ts-ignore
 
@@ -13,9 +12,7 @@ const HomeSectionFive = () => {
 
   const subscribeAction = (data: any) => {
     try {
-      //@ts-ignore
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const res = subscribe(data);
+      subscribe(data);
     } catch (e) {
       errorMessageHadler(e)
     }

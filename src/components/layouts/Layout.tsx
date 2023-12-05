@@ -2,7 +2,7 @@
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import {Outlet} from 'react-router-dom'
-import { scrollToTop } from '../../utils';
+import { scrollToTop } from '../../utils/index';
 import { FaArrowUp } from 'react-icons/fa';
 function Layout() {
     return (

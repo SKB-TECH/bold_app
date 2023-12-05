@@ -29,7 +29,7 @@ export default function ArticleContextProvider({ children }: ArticleContextProvi
             const res = await axios.get(BASE_URL + '/article/published/all');
             if (res.status === 200) {
                 setArticles(res.data.data);
-                setLoading(false);
+                setLoading(true);
             }
         } catch (error) {
             setLoading(false);
