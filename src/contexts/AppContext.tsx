@@ -42,11 +42,12 @@ function AppContexProvider({ children }: any) {
         // @ts-ignore
             return (
                 <NavigationContextProvider>
-                <UserContextPRovider>
+                <UserContextPRovider >
                  <DonContextProvider>
-                    <NewsletterContextProvider>
+                    <NewsletterContextProvider >
                     <ArticleContextProvider>
-                        <AppContext.Provider value={{ currentPath, setCurrentPath }}>
+                    
+                        <AppContext.Provider value={{ currentPath, setCurrentPath,switchLanguage,locale }}>
                             {children}
                         </AppContext.Provider>
                     </ArticleContextProvider>
